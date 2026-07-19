@@ -19,9 +19,9 @@
 {% endfor %}
 
 **By pattern**
-| Pattern | Solved | Solved with hints | Solved with solution | Total |
-|---------|--------|-------------------|----------------------|-------|
+| Pattern | Solved with solution | Solved with hints | Solved | Total | Percentage |
+|---------|--------|-------------------|----------------------|-------|------------|
 {% for name, counts in pattern_counts.items() %}
-| {{ name }} | {{ pattern_done.get(name, {}).get("solved", 0) }} | {{ pattern_done.get(name, {}).get("solved_with_hints", 0) }} | {{ pattern_done.get(name, {}).get("solved_with_solution", 0) }} | {{ counts.get("total", 0) }} |
+| {{ name }} | {{ pattern_done.get(name, {}).get("solved_with_solution", 0) }} | {{ pattern_done.get(name, {}).get("solved_with_hints", 0) }} | {{ pattern_done.get(name, {}).get("solved", 0) }} | {{ counts.get("total", 0) }} | {{ "%.1f"|format(pattern_done_percentage.get(name, 0)) }}% |
 {% endfor %}
 <!-- PROGRESS:END -->

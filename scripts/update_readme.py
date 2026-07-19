@@ -188,12 +188,8 @@ def compute_stats(pattern_counts, dif_counts) -> dict:
     # days_remaining = days until TARGET_DATE (min 0)
     days_remaining = max(0, (END_DATE - today).days)
 
-    # pattern_done = {pattern_name: count_solved_in_that_pattern}
-    #       start from {name: 0 for name in patterns} and increment
-    pattern_done = {name: counts for name, counts in pattern_counts.items()}
-
     # raw_done = len(problems)
-    raw_done = sum(pattern_done.get(name, {}).get("solved", 0) for name in pattern_done)
+    raw_done = sum(pattern_counts.get(name, {}).get("solved", 0) for name in pattern_counts)
 
     # weighted_done = sum of WEIGHTS[difficulty] across problems
     weighted_done = sum(dif_counts[dif]["solved"] * PROBLEM_MULTIPLIERS[dif] for dif in dif_counts)
@@ -209,6 +205,8 @@ def compute_stats(pattern_counts, dif_counts) -> dict:
 
     required_weighted_pace = (TOTAL_WEIGHTED - weighted_done) / days_remaining
 
+    pattern_done_percentage = {pattern: ((counts["solved"] + counts["solved_with_hints"] + counts["solved_with_solution"]) / counts["total"] * 100) if counts["total"] > 0 else 0 for pattern, counts in pattern_counts.items()}
+
     return {
         "days_elapsed": days_elapsed,
         "days_remaining": days_remaining,
@@ -222,7 +220,8 @@ def compute_stats(pattern_counts, dif_counts) -> dict:
         "required_weighted_pace": required_weighted_pace,
         "total_weighted": TOTAL_WEIGHTED,
         "percentage_weighted": weighted_done / TOTAL_WEIGHTED * 100,
-        "pattern_done": pattern_done,
+        "pattern_done": pattern_counts,
+        "pattern_done_percentage": pattern_done_percentage
     }
 
 # --- this part is the actual jinja2 demo, fully wired up ----------------
