@@ -8,8 +8,9 @@ title: Encode and Decode Strings
 url: https://neetcode.io/problems/string-encode-and-decode/question
 difficulty: Medium
 pattern: Arrays & Hashing
-status: Done
-date-first-attempt: 2024-07-27
+status: solved
+first-try:
+date-first-attempt: 2026-07-18
 sr-due:
 sr-interval: 1
 sr-ease: 250

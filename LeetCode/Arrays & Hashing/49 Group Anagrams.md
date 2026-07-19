@@ -9,8 +9,9 @@ title: Group Anagrams
 url: https://leetcode.com/problems/group-anagrams/
 difficulty: Medium
 pattern: Arrays & Hashing
-status: Done
-date-first-attempt: 2024-07-23
+status: solved
+first-try: true
+date-first-attempt: 2026-07-17
 sr-due:
 sr-interval: 1
 sr-ease: 250

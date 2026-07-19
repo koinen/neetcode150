@@ -8,8 +8,9 @@ title: Valid Anagram
 url: https://leetcode.com/problems/valid-anagram
 difficulty: Easy
 pattern: Arrays & Hashing
-status: Done
-date-first-attempt: 2024-07-22
+status: solved
+first-try: true
+date-first-attempt: 2026-07-16
 sr-due:
 sr-interval: 1
 sr-ease: 250
