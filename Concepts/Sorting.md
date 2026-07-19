@@ -48,3 +48,13 @@ sorted_arr = sorted(arr, reverse=True) # [7, 6, 5, 4, 3, 2, 1]
 - If a linear-time solution exists, since even the best sort will always perform in $O(n \cdot log n)$ (except if there are certain conditions that have already been met; unique to the sorting algorithm)
 ## Confusable with
 - [[Heaps]], if you need only a small part that's sorted instead of the whole array.
+
+#flashcards 
+What is Sorting and how does it work?
+??
+Sorting is ordering your array and make it sorted in order. 
+
+#flashcards 
+What's the typical time complexity of Sorting?
+??
+It's $O(n \cdot log n)$

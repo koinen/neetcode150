@@ -19,3 +19,13 @@ title: "{{title}}"
 
 ## Confusable with
 - 
+
+#flashcards 
+What is {{title}} and how does it work?
+??
+{{answer here}}
+
+#flashcards 
+What's the typical time complexity of {{title}}?
+??
+{{answer here}}

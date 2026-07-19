@@ -47,3 +47,13 @@ smallest = data[0] # since it's still a list.
 ---
 ## Confusable with
 - [[Sorting]] when k is close to n; heap loses its advantage, just sort
+
+#flashcards 
+What is Heaps and how does it work?
+??
+A array data structure that guarantees smallest/largest on the top.
+
+#flashcards 
+What's the typical time complexity of Heaps?
+??
+It's $O(log n)$ for push/pop, $O(n)$ for heapify, and $O(1)$ for peeking

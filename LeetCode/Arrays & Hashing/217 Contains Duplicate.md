@@ -82,7 +82,7 @@ class Solution(object):
 
 ---
 
-#flashcard
+#flashcards
 What pattern does Easy - 217 Contains Duplicate use, and what in the problem statement signals it? 
 ??
 Arrays & Hashing — trigger: Just use hashmap LOL

@@ -135,10 +135,9 @@ class Solution:
 ## 7. Mistakes I actually made
 <!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
 - In **the optimal solution** (encoding the length), I incremented by `1` instead of `length + 1` at the end of the loop.
-- 
 
 ## 8. Edge cases to always check for this pattern
-- [ ] 
+- [x] none
 
 ## 9. Related problems
 <!-- Link other notes: [[Two Sum]] -->
@@ -149,12 +148,12 @@ class Solution:
 
 ---
 
-#flashcard
+#flashcards
 What pattern does 271 Encode and Decode Strings use, and what in the problem statement signals it? 
 ??
-{{pattern}} — trigger: <fill in from section 3>
+Array & Hashing — trigger: I guess since you need to assign a symbol or something to the original character to make it reversible; therefore you need a hashtable (or some sort of alternative delimiter to tell the decoder to "stop, you've reached the end of this string.")
 
-#flashcard 
+#flashcards
 What's the key insight that unlocks 271 Encode and Decode Strings's complexity?
 ??
-{{key insight}} -- <fill in from optimal approach's key insight>
+Encode in the string's length -- You don't need to touch the string at all, just append it as is. 

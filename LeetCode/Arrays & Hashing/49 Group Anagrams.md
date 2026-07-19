@@ -103,7 +103,7 @@ class Solution(object):
 
 ---
 
-#flashcard
+#flashcards
 What pattern does 49 Group Anagrams use, and what in the problem statement signals it? 
 ??
 {{pattern}} — trigger: <fill in from section 3>

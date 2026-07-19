@@ -94,7 +94,7 @@ class Solution(object):
 
 ---
 
-#flashcard
+#flashcards
 What pattern does 242 Valid Anagram use, and what in the problem statement signals it? 
 ??
 Arrays & Hashing — trigger: USE HASHMAP!!!

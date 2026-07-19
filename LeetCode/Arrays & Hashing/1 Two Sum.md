@@ -89,7 +89,7 @@ class Solution(object):
 
 ---
 
-#flashcard
+#flashcards
 What pattern does 1 Two Sum use, and what in the problem statement signals it? 
 ??
 Arrays & Hashing — trigger: USE HASHMAP!!!

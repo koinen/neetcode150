@@ -69,11 +69,20 @@ Frequency almost always means hashmap. Top-k indicates it needs either **sorting
 >time $O(m \cdot log n)$ / space $O(m)$
 ---
 > [!info]- Idea
-> 
+> Use heaps.
 ---
 > [!info]- Why it works (the key insight)
-> {{your insight here}}
+> Because you don't need a fully sorted array if it's just need **a few** smallest/largest elements.
 ### Bucket Sort
+
+> [!info]- Complexity 
+>time $O(m)$ / space $O(m)$
+---
+> [!info]- Idea
+> Use [[Bucket Sort|bucket sort]].
+---
+> [!info]- Why it works (the key insight)
+> Instead of `num: frequency`, do `frequency: num` and just iterate from the largest freq.
 ## 6. Code
 ### 1. Standard Sort (Doesn't fulfill the follow-up constraint)
 ```python
@@ -154,11 +163,15 @@ class Solution(object):
 
 ## 9. Related problems
 <!-- Link other notes: [[Two Sum]] -->
-- 
+- Other heap and bucket sort
 
 ---
 
-#flashcard
+#flashcards
 What pattern does 347 Top K Frequent Elements use, and what in the problem statement signals it? 
 ??
-{{pattern}} — trigger: <fill in from section 3>
+Array & Hashing — trigger: Frequency almost always means hashmap. Top-k indicates it needs either **sorting** or using a **heap**.
+
+#flashcards Why is a min-heap sufficient for Top K Frequent Elements? ?? Because we only need the k largest frequencies, not a fully sorted ordering. 
+
+#flashcards Why does bucket sort work for Top K Frequent Elements? ?? The maximum possible frequency is n, so we can bucket numbers by frequency and iterate buckets from high to low.
