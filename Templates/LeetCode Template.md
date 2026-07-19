@@ -6,6 +6,7 @@ url:
 difficulty:
 pattern:
 status:
+first-try:
 date-first-attempt:
 sr-due:
 sr-interval: 1

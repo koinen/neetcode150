@@ -6,6 +6,7 @@
     "last-reviewed-at": "date",
     "last-reviewed": "date",
     "number": "number",
-    "difficulty": "text"
+    "difficulty": "text",
+    "first-try": "checkbox"
   }
 }

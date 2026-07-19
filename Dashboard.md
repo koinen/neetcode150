@@ -2,6 +2,8 @@
 > [!warning] Setup
 > Requires the **Dataview** plugin. Assumes your problem notes live in a folder called `LeetCode/` — change the path below if yours is different.
 
+> This is more for the spaced repetition, instead of problem-solving tracking progress.
+
 ## Weakness by pattern
 
 ```dataview
@@ -35,29 +37,8 @@ LIMIT 15
 ```dataview
 LIST
 FROM "LeetCode"
-WHERE status = "unsolved" OR status = "solved-slow"
+WHERE status = "unsolved" OR status = "solved_with_solution" OR status = "solved_with_hints"
 ```
-
-## Coverage — patterns you haven't touched yet
-
-- [x] Arrays & Hashing
-- [x] Two Pointers
-- [x] Stack
-- [x] Binary Search
-- [x] Sliding Window
-- [ ] Linked List
-- [ ] Trees
-- [ ] Tries
-- [ ] Heap/Priority Queue
-- [ ] Intervals
-- [ ] Greedy
-- [ ] Backtracking
-- [ ] Graphs
-- [ ] 1-D DP
-- [ ] 2-D DP
-- [ ] Advanced Graphs
-- [ ] Bit Manipulation
-- [ ] Math & Geometry
 
 ## All notes (raw)
 
