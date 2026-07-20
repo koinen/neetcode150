@@ -5,12 +5,12 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 <!-- PROGRESS:START -->
 
-## **Day 4 / 92**
+## **Day 5 / 92**
 - **Remaining**: 88 day(s)
 - **Completed**: 10 / 150 (6.7%)
 - **Weighted score**: 18 / 293 (6.1%)
-- **Current pace**: 2.50 problems/day 
-- **Current pace (weighted)**: 4.50 problems/day (weighted)
+- **Current pace**: 2.00 problems/day 
+- **Current pace (weighted)**: 3.60 problems/day (weighted)
 - **Required pace**: 1.59 problems/day — ✅ on track
 - **Required pace (weighted)**: 3.12 problems/day — ✅ on track
 - **Current streak**: 5 day(s)
