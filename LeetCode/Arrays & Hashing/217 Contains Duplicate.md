@@ -81,9 +81,10 @@ class Solution(object):
 - ...
 
 ---
+### Flashcards
 
 #flashcards
 What pattern does Easy - 217 Contains Duplicate use, and what in the problem statement signals it? 
 Return `true` if you found a duplicate in an array of numbers, else return `false`.
-??
+?
 Arrays & Hashing — trigger: Just use hashmap LOL

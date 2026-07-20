@@ -71,12 +71,7 @@ This is what you're actually training — pattern recall, not the solution itsel
 
 ---
 
-#flashcards
-What pattern does {{title}} use, and what in the problem statement signals it? 
-??
-{{pattern}} — trigger: <fill in from section 3>
+### Flashcards
 
-#flashcards
-What's the key insight that unlocks {{title}}'s complexity?
-??
-{{key insight}} -- <fill in from optimal approach's key insight>
+#flashcards/misclassified/{{pattern}} 
+On {{title}}, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.

@@ -93,9 +93,10 @@ class Solution(object):
 - [[49 Group Anagrams]]
 
 ---
+### Flashcards
 
 #flashcards
 What pattern does 242 Valid Anagram use, and what in the problem statement signals it? 
 Given an array of strings, group them based on if they are anagrams or not.
-??
+?
 Arrays & Hashing — trigger: USE HASHMAP!!!

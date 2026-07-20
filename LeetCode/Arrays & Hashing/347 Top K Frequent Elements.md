@@ -166,6 +166,7 @@ class Solution(object):
 - Other heap and bucket sort
 
 ---
+### Flashcards
 
 #flashcards
 What pattern does 347 Top K Frequent Elements use, and what in the problem statement signals it? 
@@ -182,6 +183,12 @@ if k = 1, return `[2]`, if k = 2, return `[2, 1]`, if k = 3, return `[2, 1, 3]`.
 ??
 Array & Hashing — trigger: Frequency almost always means hashmap. Top-k indicates it needs either **sorting** or using a **heap**.
 
-#flashcards Why is a min-heap sufficient for Top K Frequent Elements? ?? Because we only need the k largest frequencies, not a fully sorted ordering. 
+#flashcards 
+Why is a min-heap sufficient for Top K Frequent Elements? 
+? 
+Because we only need the k largest frequencies, not a fully sorted ordering. 
 
-#flashcards Why does bucket sort work for Top K Frequent Elements? ?? The maximum possible frequency is n, so we can bucket numbers by frequency and iterate buckets from high to low.
+#flashcards 
+Why does bucket sort work for Top K Frequent Elements? 
+?
+The maximum possible frequency is n, so we can bucket numbers by frequency and iterate buckets from high to low.
