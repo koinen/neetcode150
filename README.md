@@ -5,23 +5,23 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 <!-- PROGRESS:START -->
 
-## **Day 3 / 92**
-- **Remaining**: 89 day(s)
+## **Day 4 / 92**
+- **Remaining**: 88 day(s)
 - **Completed**: 6 / 150 (4.0%)
-- **Weighted score**: 9 / 293 (3.1%)
-- **Current pace**: 2.00 problems/day 
-- **Current pace (weighted)**: 3.00 problems/day (weighted)
-- **Required pace**: 1.62 problems/day — ✅ on track
-- **Required pace (weighted)**: 3.19 problems/day — ⚠️ behind pace
-- **Current streak**: 3 day(s)
-- **Last active**: 2026-07-18
+- **Weighted score**: 11 / 293 (3.8%)
+- **Current pace**: 1.50 problems/day 
+- **Current pace (weighted)**: 2.75 problems/day (weighted)
+- **Required pace**: 1.64 problems/day — ⚠️ behind pace
+- **Required pace (weighted)**: 3.20 problems/day — ⚠️ behind pace
+- **Current streak**: 4 day(s)
+- **Last active**: 2026-07-19
 
-### **By difficulty**
+**By difficulty**
 - **Easy**: 3 / 28 (10.7%)
-- **Medium**: 3 / 101 (3.0%)
+- **Medium**: 4 / 101 (4.0%)
 - **Hard**: 0 / 21 (0.0%)
 
-### **By pattern**
+**By pattern**
 | Pattern | Solved with solution | Solved with hints | Solved | Total | Percentage |
 |---------|--------|-------------------|----------------------|-------|------------|
 | Arrays & Hashing | 0 | 0 | 6 | 9 | 66.7% |
