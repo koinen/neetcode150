@@ -183,7 +183,7 @@ def compute_stats(pattern_counts, dif_counts) -> dict:
     today = date.today()
 
     # days_elapsed = days since START_DATE (min 1 to avoid /0)
-    days_elapsed = max(1, (today - START_DATE).days)
+    days_elapsed = (today - START_DATE).days + 1
 
     # days_remaining = days until TARGET_DATE (min 0)
     days_remaining = max(0, (END_DATE - today).days)
