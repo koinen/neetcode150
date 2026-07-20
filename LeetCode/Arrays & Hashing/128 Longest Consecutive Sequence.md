@@ -8,8 +8,8 @@ title: Longest Consecutive Sequence
 url: https://leetcode.com/problems/longest-consecutive-sequence
 difficulty: Medium
 pattern: Arrays & Hashing
-status:
-first-try:
+status: solved
+first-try: true
 date-first-attempt: 2026-07-20
 sr-due:
 sr-interval: 1
@@ -48,37 +48,91 @@ Can't sort. what else is there other than hash table amirite
 
 ## 5. Optimal approach
 
+### DP
 > [!info]- Complexity 
 >time $O(n)$ / space $O(n)$
 ---
 > [!info]- Idea
-> Use hash table to keep track of existence....
+> Use a hashtable and DP, first; store the element and which index it is. second; store the length of the longest consecutive sequence from that element: `element, element + 1, ...` and loop through the array with that. if it's `elmt + 1` is filled, use it by `dp[elmt] = dp[elmt+1]`; else, fill it.
+---
+> [!info]- Why it is redundant.
+> Because you're doing the counts for the partial sequence as well, when you could just skip through and start from the smallest. Also, all the hash table lookups stacks up.
+### Hash Set
+> [!info]- Complexity 
+>time $O(n)$ / space $O(n)$
+---
+> [!info]- Idea
+> Use hash set to keep track of existence
 ---
 > [!info]- Why it works (the key insight)
-> Because you just need to check if key exists in the hash table; the key being the consecutive element.
+> Because you just need to check if key exists in the hash table; the key being the next consecutive element. Also, important to do is start only from the lowest to prevent redundant work.
 
 ## 6. Code
+### DP
 ```python
 # language: 
+class Solution:
+	def longestConsecutive(self, nums: List[int]) -> int:
+		table = {}
+		for i, val in enumerate(nums):
+			table[val] = i
+	
+		dp = [-1 for i in range(len(nums))]
+		ans = 0
+	
+		for val in table.keys():
+			if dp[table[val]] != -1:
+				continue
+			k = 1
+			
+			while (val+k) in table and (dp[table[val+k]] == -1):
+				k += 1
+	
+			if (val + k) not in table:
+				dp[table[val+k-1]] = 1
+			else:
+				dp[table[val+k-1]] = dp[table[val+k]] + 1
+				
+			k -= 1
+			while k > 0:
+				dp[table[val+k-1]] = dp[table[val+k]] + 1
+				k -= 1
 
+			ans = max(dp[table[val+k]], ans)
+	
+		return ans
 ```
+### Hash Set
+```python
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        num_set = set(nums)
+        ans = 0
+        length = 0
+        for i in num_set: # for some reason, iterating through nums resulted in TLE
+            if i - 1 not in num_set:
+                length = 1
+                while (i + length) in num_set:
+                    length += 1
+                ans = max(ans, length)
 
+        return ans
+```
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
-- 
-- 
+- Don't use raw `nums`, use the set instead in case it has high duplication.
+- DP isn't always the best way to prevent redundant work, if you can truly go in one shot, DP just adds overhead.
+
+> The actual signal to look for next time: when adjacency/recurrence is defined by _value relationships_ rather than _array position_, and there's no natural order to process elements in, that's a hash-set/hash-map membership problem, not DP. The $O(n)$ requirement is your confirmation — it's telling you "don't sort, don't do combinatorial subproblem buildup, just get $O(1)$ lookups and be smart about which elements you start counting from."
 
 ## 8. Edge cases to always check for this pattern
-- [ ] 
-- [ ] 
+- [x] None
 
 ## 9. Related problems
 <!-- Link other notes: [[Two Sum]] -->
-- 
 
 ---
 
 ### Flashcards
 
-#flashcards/misclassified/{{pattern}} 
-On 128 Longest Consecutive Sequence, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.
+#flashcards/misclassified/arrays-and-hashing
+On 128 Longest Consecutive Sequence, I first reached for Dynamic Programming, but ==The $O(n)$  time complexity requirement== should have pointed me to ==Hash-set== instead.

@@ -2,7 +2,7 @@
 > [!warning] Setup
 > Requires the **Dataview** plugin. Assumes your problem notes live in a folder called `LeetCode/` — change the path below if yours is different.
 
-> This is more for the spaced repetition, instead of problem-solving tracking progress.
+> This is more for the spaced repetition, instead of problem-solving progress tracking.
 
 ## Weakness by pattern
 
