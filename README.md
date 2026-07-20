@@ -7,25 +7,25 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 ## **Day 4 / 92**
 - **Remaining**: 88 day(s)
-- **Completed**: 6 / 150 (4.0%)
-- **Weighted score**: 11 / 293 (3.8%)
-- **Current pace**: 1.50 problems/day 
-- **Current pace (weighted)**: 2.75 problems/day (weighted)
-- **Required pace**: 1.64 problems/day — ⚠️ behind pace
-- **Required pace (weighted)**: 3.20 problems/day — ⚠️ behind pace
-- **Current streak**: 4 day(s)
-- **Last active**: 2026-07-19
+- **Completed**: 10 / 150 (6.7%)
+- **Weighted score**: 18 / 293 (6.1%)
+- **Current pace**: 2.50 problems/day 
+- **Current pace (weighted)**: 4.50 problems/day (weighted)
+- **Required pace**: 1.59 problems/day — ✅ on track
+- **Required pace (weighted)**: 3.12 problems/day — ✅ on track
+- **Current streak**: 5 day(s)
+- **Last active**: 2026-07-20
 
 **By difficulty**
-- **Easy**: 3 / 28 (10.7%)
-- **Medium**: 4 / 101 (4.0%)
+- **Easy**: 4 / 28 (14.3%)
+- **Medium**: 7 / 101 (6.9%)
 - **Hard**: 0 / 21 (0.0%)
 
 **By pattern**
 | Pattern | Solved with solution | Solved with hints | Solved | Total | Percentage |
 |---------|--------|-------------------|----------------------|-------|------------|
-| Arrays & Hashing | 0 | 0 | 6 | 9 | 66.7% |
-| Two Pointers | 0 | 0 | 0 | 5 | 0.0% |
+| Arrays & Hashing | 0 | 0 | 8 | 9 | 88.9% |
+| Two Pointers | 0 | 0 | 2 | 5 | 40.0% |
 | Stack | 0 | 0 | 0 | 6 | 0.0% |
 | Binary Search | 0 | 0 | 0 | 7 | 0.0% |
 | Sliding Window | 0 | 0 | 0 | 6 | 0.0% |
