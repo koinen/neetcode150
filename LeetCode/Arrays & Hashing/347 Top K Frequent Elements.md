@@ -64,7 +64,6 @@ Frequency almost always means hashmap. Top-k indicates it needs either **sorting
 ## 5. Optimal approach
 
 ### Minimum Heap
-
 > [!info]- Complexity 
 >time $O(m \cdot log n)$ / space $O(m)$
 ---
@@ -74,7 +73,6 @@ Frequency almost always means hashmap. Top-k indicates it needs either **sorting
 > [!info]- Why it works (the key insight)
 > Because you don't need a fully sorted array if it's just need **a few** smallest/largest elements.
 ### Bucket Sort
-
 > [!info]- Complexity 
 >time $O(m)$ / space $O(m)$
 ---

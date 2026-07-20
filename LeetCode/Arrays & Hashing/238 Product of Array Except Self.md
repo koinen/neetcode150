@@ -16,14 +16,12 @@ sr-ease: 250
 last-reviewed: 2026-07-19
 ---
 ## 1. Problem (in my own words)
-<!-- Rewrite the problem without looking at the original. If you can't, you don't understand it yet. -->
 Given an array of integers `nums`, return an array in which the elements are the product of all the other elements except itself. 
 
 For example, in the input:
 `[1, 2, 3, 4]`; the output would be `[24, 12, 8, 6]`.
 
 ## 2. Constraints & what they imply
-<!-- e.g. n ≤ 10^5 → need O(n log n) or better. n ≤ 20 → bitmask/brute force is fine. -->
 [[Constraint to Complexity Reference|See here for reference]]
 
 | Constraint                                                                                     | Implication for approach                                              |
@@ -38,8 +36,6 @@ For example, in the input:
 | `O(1)` extra space complexity. | Try to use the information right then and there, no need to store in memory. |
 
 ## 3. Recognition trigger
-<!-- The single most important field. What SHOULD have told you the pattern, before you solved it?
-This is what you're actually training — pattern recall, not the solution itself. -->
 It's an array... $O(n)$ complexity means you need to use just a simple linear scan.
 ## 4. Brute force
 
@@ -109,14 +105,12 @@ class Solution:
 		return res
 ```
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
 - Off by one, wasn't sure where the range should begin and when it should end.
 
 ## 8. Edge cases to always check for this pattern
 - [x] none
 
 ## 9. Related problems
-<!-- Link other notes: [[Two Sum]] -->
 - other prefix sum problems should go here...
 
 ---

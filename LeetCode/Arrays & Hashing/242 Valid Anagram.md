@@ -20,7 +20,6 @@ last-reviewed: 2026-07-17
 Given an array of strings, group them based on if they are anagrams or not.
 
 ## 2. Constraints & what they imply
-<!-- e.g. n ≤ 10^5 → need O(n log n) or better. n ≤ 20 → bitmask/brute force is fine. -->
 [[Constraint to Complexity Reference|See here for reference]]
 
 | Constraint                                        | Implication for approach       |
@@ -29,8 +28,7 @@ Given an array of strings, group them based on if they are anagrams or not.
 | `s` and `t` consist of lowercase English letters. | ... doesn't change much.       |
 
 ## 3. Recognition trigger
-<!-- The single most important field. What SHOULD have told you **the pattern**, before you solved it?
-This is what you're actually training — pattern recall, not the solution itself. -->
+Character frequency!!
 
 ## 4. Brute force
 
@@ -99,4 +97,4 @@ class Solution(object):
 What pattern does 242 Valid Anagram use, and what in the problem statement signals it? 
 Given an array of strings, group them based on if they are anagrams or not.
 ?
-Arrays & Hashing — trigger: USE HASHMAP!!!
+Arrays & Hashing — trigger: character frequency
