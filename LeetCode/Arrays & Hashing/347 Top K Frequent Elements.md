@@ -169,6 +169,16 @@ class Solution(object):
 
 #flashcards
 What pattern does 347 Top K Frequent Elements use, and what in the problem statement signals it? 
+Given an array of numbers, return an array containing the top-k most frequent elements. 
+For example, given an array `[1, 2, 2, 1, 3, 2]`, their frequencies would be: 
+```
+{
+	1: 2,
+	2: 3,
+	3: 1
+}
+```
+if k = 1, return `[2]`, if k = 2, return `[2, 1]`, if k = 3, return `[2, 1, 3]`.
 ??
 Array & Hashing — trigger: Frequency almost always means hashmap. Top-k indicates it needs either **sorting** or using a **heap**.
 

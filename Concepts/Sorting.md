@@ -54,7 +54,8 @@ What is Sorting and how does it work?
 ??
 Sorting is ordering your array and make it sorted in order. 
 
-#flashcards 
+#flashcards
 What's the typical time complexity of Sorting?
 ??
 It's $O(n \cdot log n)$
+<!--SR:!2026-07-24,4,270!2000-01-01,1,250-->

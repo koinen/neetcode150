@@ -123,6 +123,10 @@ class Solution:
 
 #flashcards
 What pattern does 238 Product of Array Except Self use, and what in the problem statement signals it? 
+Given an array of integers `nums`, return an array in which the elements are the product of all the other elements except itself. 
+
+For example, in the input:
+`[1, 2, 3, 4]`; the output would be `[24, 12, 8, 6]`.
 ??
 Arrays & Hashing — It's an array... $O(n)$ complexity means you need to use just a simple linear scan.
 

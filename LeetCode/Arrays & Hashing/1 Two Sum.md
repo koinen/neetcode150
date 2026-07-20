@@ -91,6 +91,7 @@ class Solution(object):
 
 #flashcards
 What pattern does 1 Two Sum use, and what in the problem statement signals it? 
+In an array of numbers, return the **two** indices of the elements where they sum to `target`.
 ??
 Arrays & Hashing — trigger: USE HASHMAP!!!
 
