@@ -53,7 +53,7 @@ Can't sort. what else is there other than hash table amirite
 >time $O(n)$ / space $O(n)$
 ---
 > [!info]- Idea
-> Use a hashtable and DP, first; store the element and which index it is. second; store the length of the longest consecutive sequence from that element: `element, element + 1, ...` and loop through the array with that. if it's `elmt + 1` is filled, use it by `dp[elmt] = dp[elmt+1]`; else, fill it.
+> Use a hashtable and DP, first; store the element and which index it is. second; store the length of the longest consecutive sequence from that element: `element, element + 1, ...` and loop through the array with that. if it's `elmt + 1` is filled, use it by `dp[elmt] = dp[elmt+1] + 1`; else, fill it.
 ---
 > [!info]- Why it is redundant.
 > Because you're doing the counts for the partial sequence as well, when you could just skip through and start from the smallest. Also, all the hash table lookups stacks up.

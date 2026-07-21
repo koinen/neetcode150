@@ -11,7 +11,7 @@ status: solved-with-hints
 first-try:
 date-first-attempt: 2026-07-19
 sr-due:
-sr-interval: 1
+sr-interval: -1
 sr-ease: 250
 last-reviewed: 2026-07-19
 ---
