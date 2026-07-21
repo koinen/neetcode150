@@ -205,7 +205,7 @@ def compute_stats(pattern_counts, dif_counts) -> dict:
 
     required_weighted_pace = (TOTAL_WEIGHTED - weighted_done) / days_remaining
 
-    pattern_done_percentage = {pattern: ((counts["solved"] + counts["solved_with_hints"] + counts["solved_with_solution"]) / counts["total"] * 100) if counts["total"] > 0 else 0 for pattern, counts in pattern_counts.items()}
+    pattern_done_percentage = {pattern: ((counts["solved"] + counts["solved-with-hints"] + counts["solved-with-solution"]) / counts["total"] * 100) if counts["total"] > 0 else 0 for pattern, counts in pattern_counts.items()}
 
     return {
         "days_elapsed": days_elapsed,
