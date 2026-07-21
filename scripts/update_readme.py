@@ -49,7 +49,7 @@ PROBLEM_CATEGORIES = {
     "Math & Geometry": 8,
 }
 
-PROBLEM_STATUSES = ["solved", "unsolved", "in_progress", "solved_with_hints", "solved_with_solution"]
+PROBLEM_STATUSES = ["solved", "unsolved", "in-progress", "solved-with-hints", "solved-with-solution"]
 
 SCRIPTS_DIR = Path(__file__).parent
 TEMPLATE_NAME = "progress_block.md.j2"
