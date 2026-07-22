@@ -5,27 +5,27 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 <!-- PROGRESS:START -->
 
-## **Day 5 / 92**
-- **Remaining**: 88 day(s)
-- **Completed**: 10 / 150 (6.7%)
-- **Weighted score**: 18 / 293 (6.1%)
-- **Current pace**: 2.00 problems/day 
-- **Current pace (weighted)**: 3.60 problems/day (weighted)
-- **Required pace**: 1.59 problems/day — ✅ on track
-- **Required pace (weighted)**: 3.12 problems/day — ✅ on track
-- **Current streak**: 5 day(s)
-- **Last active**: 2026-07-20
+## **Day 6 / 92**
+- **Remaining**: 87 day(s)
+- **Completed**: 13 / 150 (8.7%)
+- **Weighted score**: 25 / 293 (8.5%)
+- **Current pace**: 2.17 problems/day 
+- **Current pace (weighted)**: 4.17 problems/day (weighted)
+- **Required pace**: 1.57 problems/day — ✅ on track
+- **Required pace (weighted)**: 3.08 problems/day — ✅ on track
+- **Current streak**: 6 day(s)
+- **Last active**: 2026-07-21
 
 **By difficulty**
 - **Easy**: 4 / 28 (14.3%)
-- **Medium**: 7 / 101 (6.9%)
-- **Hard**: 0 / 21 (0.0%)
+- **Medium**: 9 / 101 (8.9%)
+- **Hard**: 1 / 21 (4.8%)
 
 **By pattern**
 | Pattern | Solved with solution | Solved with hints | Solved | Total | Percentage |
 |---------|--------|-------------------|----------------------|-------|------------|
-| Arrays & Hashing | 0 | 0 | 8 | 9 | 88.9% |
-| Two Pointers | 0 | 0 | 2 | 5 | 40.0% |
+| Arrays & Hashing | 0 | 1 | 8 | 9 | 100.0% |
+| Two Pointers | 0 | 0 | 5 | 5 | 100.0% |
 | Stack | 0 | 0 | 0 | 6 | 0.0% |
 | Binary Search | 0 | 0 | 0 | 7 | 0.0% |
 | Sliding Window | 0 | 0 | 0 | 6 | 0.0% |
