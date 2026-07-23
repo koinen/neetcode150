@@ -33,52 +33,61 @@ Example:
 | `30 <= temperatures[i] <= 100`     | int32                                   |
 
 ## 3. Recognition trigger
-I need the information of the most recent larger value up to now. 
+I need the information of the **most recent** larger value up to now.
 
 ## 4. Brute force
 
 > [!info]- Idea
-> {{your idea here}}
+> Loop through each element and find the closest larger value, also by scanning ahead.
 ---
 >[!info]- Complexity 
->time $O({{your complexity here}})$ / space $O({{your complexity here}})$
+>time $O(n^2)$ / space $O(1)$
 ---
 > [!warning]- Why it's not enough?
-> {{why?}}
+> Because you're scanning the same things repeatedly. It's better if you can scan it once and store the information somehow.
 
 ## 5. Optimal approach
 
 > [!info]- Complexity 
->time $O({{your complexity here}})$ / space $O({{your complexity here}})$
+>time $O(n)$ / space $O(n)$
 ---
 > [!info]- Idea
-> {{your idea here}}
+> Use a stack. Loop through the elements from behind, and store a decreasing stack (the top value will be less than the one below it). That way, if you ever need a larger value than the current top, just dig it. 
+> Also, use the index and not the value, since the problem asks for the distance between indices.
 ---
 > [!info]- Why it works (the key insight)
-> {{your insight here}}
+> Because you truly only need that particular information to proceed, right? This is keeping it as minimal as possible.
 
 ## 6. Code
 ```python
-# language: 
+# language: python
 
+from collections import deque
+
+class Solution:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        stack = deque()
+        length = len(temperatures)
+        ans = [0 for i in range(length)]
+        for i in range(length-1, -1, -1):
+            while stack and temperatures[i] >= temperatures[stack[-1]]:
+                stack.pop()
+            if stack: # else, skip and keep it as 0.
+                ans[i] = stack[-1] - i
+            stack.append(i)
+        
+        return ans
 ```
 
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
-- 
-- 
+- Keep the index, instead of the values. The problem asks for indices is why.
 
 ## 8. Edge cases to always check for this pattern
-- [ ] 
-- [ ] 
+- [x] Check stack empty or not before popping and peeking
 
 ## 9. Related problems
-<!-- Link other notes: [[Two Sum]] -->
 - 
 
 ---
 
 ### Flashcards
-
-#flashcards/misclassified/{{pattern}} 
-On 739 Daily Temperature, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.
