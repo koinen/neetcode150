@@ -10,11 +10,11 @@ difficulty: Medium
 pattern: Stack
 status: solved
 first-try: true
-date-first-attempt:
+date-first-attempt: 2026-07-22
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed:
+last-reviewed: 2026-07-22
 ---
 ## 1. Problem (in my own words)
 Given an array of strings (tokens) that describes an expression using the postfix notation, return the result of the expression.
@@ -31,52 +31,62 @@ The type of strings entered include:
 | - Number inputs will be integers in the range `[-200, 200]`<br>- The answer and all the intermediate calculations can be represented in a **32-bit** integer. | int32 is enough                |
 
 ## 3. Recognition trigger
-The most basic expression is `num, num, operator`. Operator needs the top two numbers. Gee I wonder what's
+The most basic expression is `numLeft, numRight, operator`. Operator needs the top **two most recent** numbers. Gee I wonder what's the most effective way to get the **top most recent** values.
 
 ## 4. Brute force
-
-> [!info]- Idea
-> {{your idea here}}
----
->[!info]- Complexity 
->time $O({{your complexity here}})$ / space $O({{your complexity here}})$
----
-> [!warning]- Why it's not enough?
-> {{why?}}
+I don't know. The use of stack is already etched to my brain for this problem.
 
 ## 5. Optimal approach
 
 > [!info]- Complexity 
->time $O({{your complexity here}})$ / space $O({{your complexity here}})$
+>time $O(n)$ / space $O(n)$
 ---
 > [!info]- Idea
-> {{your idea here}}
+> Use stack to keep the numbers. Pop the two numbers if an operator is found, calculate the result, and push it back in. The result would be just one value in the stack at the end of the expression.
 ---
 > [!info]- Why it works (the key insight)
-> {{your insight here}}
+> Because it's always two numbers and an operator at the most basic level. 
 
 ## 6. Code
 ```python
-# language: 
+# language: python
 
+from collections import deque
+
+class Solution:
+    def evalRPN(self, tokens: List[str]) -> int:
+        stack = deque()
+        for i in range(len(tokens)):
+            if tokens[i] == '+' or tokens[i] == '*' or tokens[i] == '-' or tokens[i] == '/' :
+                num_r = stack.pop()
+                num_l = stack.pop()
+                if tokens[i] == '+':
+                    # print(f"{num_l} + {num_r} = {num_l + num_r}")
+                    stack.append(num_l + num_r)
+                elif tokens[i] == '/':
+                    # print(f"{num_l} / {num_r} = {int(num_l / num_r)}")
+                    stack.append(int(num_l / num_r))
+                elif tokens[i] == '-':
+                    # print(f"{num_l} - {num_r} = {num_l - num_r}")
+                    stack.append(num_l - num_r)
+                else:
+                    # print(f"{num_l} * {num_r} = {num_l * num_r}")
+                    stack.append(num_l * num_r)
+            else:
+                stack.append(int(tokens[i]))
+        
+        return stack.pop()
 ```
 
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
-- 
-- 
+- The division i used earlier, with the operator `//` in Python doesn't converge to zero if it's negative. The use of `int(num_l / num_r)` fixes that.
 
 ## 8. Edge cases to always check for this pattern
-- [ ] 
-- [ ] 
+- [x] Nothing to check for this particular problem
 
 ## 9. Related problems
-<!-- Link other notes: [[Two Sum]] -->
-- 
+- None
 
 ---
 
 ### Flashcards
-
-#flashcards/misclassified/{{pattern}} 
-On 150 Evaluate Reverse Polish Notation, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.
