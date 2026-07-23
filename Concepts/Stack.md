@@ -33,7 +33,8 @@ if not stack:
 
 ```
 ## When you reach for it
-- 
+- Typically, when you need some recent information to proceed. 
+- Usually, it's "the next greater/smaller element", in which case you can use a [[Monotonic Stack|monotonic stack]], where you get to merge elements based on conditions
 ## Gotchas
 - 
 
@@ -47,12 +48,12 @@ if not stack:
 #flashcards/concept
 What is Stack and how does it work?
 ?
-{{answer here}}
+A LIFO data structure.
 
 #flashcards/concept
 What's the typical time complexity of Stack?
 ?
-{{answer here}}
+$O(1)$ for all operations (push, pop, peek, isEmpty)
 
 #flashcards/pattern
 Stack applies when =={{condition A}}==, distinguishing it from {{competing pattern}}, which applies when =={{condition B}}==. The signal in problem statements is usually =={{phrasing/constraint that tips it off}}==.
