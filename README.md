@@ -5,20 +5,20 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 <!-- PROGRESS:START -->
 
-## **Day 6 / 92**
-- **Remaining**: 87 day(s)
-- **Completed**: 13 / 150 (8.7%)
-- **Weighted score**: 25 / 293 (8.5%)
-- **Current pace**: 2.17 problems/day 
-- **Current pace (weighted)**: 4.17 problems/day (weighted)
-- **Required pace**: 1.57 problems/day — ✅ on track
-- **Required pace (weighted)**: 3.08 problems/day — ✅ on track
-- **Current streak**: 6 day(s)
-- **Last active**: 2026-07-21
+## **Day 8 / 92**
+- **Remaining**: 85 day(s)
+- **Completed**: 16 / 150 (10.7%)
+- **Weighted score**: 30 / 293 (10.2%)
+- **Current pace**: 2.00 problems/day 
+- **Current pace (weighted)**: 3.75 problems/day (weighted)
+- **Required pace**: 1.58 problems/day — ✅ on track
+- **Required pace (weighted)**: 3.09 problems/day — ✅ on track
+- **Current streak**: 7 day(s)
+- **Last active**: 2026-07-22
 
 **By difficulty**
-- **Easy**: 4 / 28 (14.3%)
-- **Medium**: 9 / 101 (8.9%)
+- **Easy**: 5 / 28 (17.9%)
+- **Medium**: 11 / 101 (10.9%)
 - **Hard**: 1 / 21 (4.8%)
 
 **By pattern**
@@ -26,7 +26,7 @@ Of course, it would be best if you use Obsidian to display the notes.
 |---------|--------|-------------------|----------------------|-------|------------|
 | Arrays & Hashing | 0 | 1 | 8 | 9 | 100.0% |
 | Two Pointers | 0 | 0 | 5 | 5 | 100.0% |
-| Stack | 0 | 0 | 0 | 6 | 0.0% |
+| Stack | 0 | 0 | 3 | 6 | 50.0% |
 | Binary Search | 0 | 0 | 0 | 7 | 0.0% |
 | Sliding Window | 0 | 0 | 0 | 6 | 0.0% |
 | Linked List | 0 | 0 | 0 | 11 | 0.0% |
