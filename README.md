@@ -7,18 +7,18 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 ## **Day 8 / 92**
 - **Remaining**: 85 day(s)
-- **Completed**: 16 / 150 (10.7%)
-- **Weighted score**: 30 / 293 (10.2%)
-- **Current pace**: 2.00 problems/day 
-- **Current pace (weighted)**: 3.75 problems/day (weighted)
-- **Required pace**: 1.58 problems/day — ✅ on track
-- **Required pace (weighted)**: 3.09 problems/day — ✅ on track
-- **Current streak**: 7 day(s)
-- **Last active**: 2026-07-22
+- **Completed**: 18 / 150 (12.0%)
+- **Weighted score**: 34 / 293 (11.6%)
+- **Current pace**: 2.25 problems/day 
+- **Current pace (weighted)**: 4.25 problems/day (weighted)
+- **Required pace**: 1.55 problems/day — ✅ on track
+- **Required pace (weighted)**: 3.05 problems/day — ✅ on track
+- **Current streak**: 8 day(s)
+- **Last active**: 2026-07-23
 
 **By difficulty**
 - **Easy**: 5 / 28 (17.9%)
-- **Medium**: 11 / 101 (10.9%)
+- **Medium**: 13 / 101 (12.9%)
 - **Hard**: 1 / 21 (4.8%)
 
 **By pattern**
@@ -26,7 +26,7 @@ Of course, it would be best if you use Obsidian to display the notes.
 |---------|--------|-------------------|----------------------|-------|------------|
 | Arrays & Hashing | 0 | 1 | 8 | 9 | 100.0% |
 | Two Pointers | 0 | 0 | 5 | 5 | 100.0% |
-| Stack | 0 | 0 | 3 | 6 | 50.0% |
+| Stack | 0 | 0 | 5 | 6 | 83.3% |
 | Binary Search | 0 | 0 | 0 | 7 | 0.0% |
 | Sliding Window | 0 | 0 | 0 | 6 | 0.0% |
 | Linked List | 0 | 0 | 0 | 11 | 0.0% |
