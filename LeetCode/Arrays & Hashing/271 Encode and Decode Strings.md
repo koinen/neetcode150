@@ -14,13 +14,12 @@ date-first-attempt: 2026-07-18
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed:
+last-reviewed: 2026-07-18
 ---
 ## 1. Problem (in my own words)
 Make an encoding and decoding algorithm for a list of strings. It has to be encoded to a single string, and be able to be decoded back to the original list of strings.
 
 ## 2. Constraints & what they imply
-<!-- e.g. n ≤ 10^5 → need O(n log n) or better. n ≤ 20 → bitmask/brute force is fine. -->
 [[Constraint to Complexity Reference|See here for reference]]
 
 | Constraint                                                                      | Implication for approach                                                                                        |
