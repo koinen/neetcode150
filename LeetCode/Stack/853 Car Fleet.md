@@ -50,10 +50,10 @@ You need to merge with a bigger/smaller/some certain condition`*` element. (cond
 >time $O(n \cdot log n)$ / space $O(n)$
 ---
 > [!info]- Idea
-> Use a decreasing [[Monotonic Stack|monotonic stack]], with the time taken as the value. Since a car/fleet having a larger time means it's gonna be slower, and therefore any car faster **and behind** than it should get merged to it. 
+> Use a decreasing [[Monotonic Stack|monotonic stack]], with the time taken as the value. Since a car/fleet having a larger time means it's gonna be slower, and therefore any car slower **and ahead** than the current formed fleets should get merged to it. 
 ---
 > [!info]- Why it works (the key insight)
-> Since a stack is LIFO, we get to use the top, which is the 'fastest current fleet' to compare and merge. 
+> Since a stack is LIFO, we get to use the top, which is the 'fastest current fleet' to compare. If the current car is slower, we need to merge all other fleets that are faster than the current car.
 ## 6. Code
 ```python
 # language: python
@@ -74,21 +74,14 @@ class Solution:
 ```
 
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
-- 
-- 
+- I initially thought to only pop once to replace the fleet with the current car, but this ignores the fact that other defined fleets can merge with this car as well. 
 
 ## 8. Edge cases to always check for this pattern
-- [ ] 
-- [ ] 
+- [x] None
 
 ## 9. Related problems
-<!-- Link other notes: [[Two Sum]] -->
-- 
+- None
 
 ---
 
 ### Flashcards
-
-#flashcards/misclassified/{{pattern}} 
-On 853 Car Fleet, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.
