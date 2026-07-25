@@ -124,8 +124,10 @@ For example, in the input:
 `[1, 2, 3, 4]`; the output would be `[24, 12, 8, 6]`.
 ?
 Arrays & Hashing — It's an array... $O(n)$ complexity means you need to use just a simple linear scan.
+<!--SR:!2026-07-28,4,270-->
 
 #flashcards
 What's the key insight/tool that unlocks 238 Product of Array Except Self's complexity?
 ?
-Prefix/Suffix Sum -- Because it saves all the information that's necessary just by doing it once. 
+Prefix/Suffix Sum -- Because it saves all the information that's necessary just by doing it once.
+<!--SR:!2026-07-28,4,270--> 

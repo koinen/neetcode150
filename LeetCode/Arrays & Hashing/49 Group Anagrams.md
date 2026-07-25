@@ -105,8 +105,9 @@ class Solution(object):
 ### Flashcards
 
 #flashcards
-What pattern does 49 Group Anagrams use, and what in the problem statement signals it? 
+What pattern does 49 Group Anagrams use, and what in the problem statement signals it?
 Given an array of strings, group them based on if they are anagrams or not.
 For example: `[ab, ba, bb]` would result in `[[ab, ba], [bb]]`, since `ab` and `ba` are anagrams.
 ?
 {{pattern}} — trigger: <fill in from section 3>
+<!--SR:!2026-07-28,4,270-->

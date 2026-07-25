@@ -167,9 +167,9 @@ class Solution(object):
 ### Flashcards
 
 #flashcards
-What pattern does 347 Top K Frequent Elements use, and what in the problem statement signals it? 
-Given an array of numbers, return an array containing the top-k most frequent elements. 
-For example, given an array `[1, 2, 2, 1, 3, 2]`, their frequencies would be: 
+What pattern does 347 Top K Frequent Elements use, and what in the problem statement signals it?
+Given an array of numbers, return an array containing the top-k most frequent elements.
+For example, given an array `[1, 2, 2, 1, 3, 2]`, their frequencies would be:
 ```
 {
 	1: 2,
@@ -180,13 +180,16 @@ For example, given an array `[1, 2, 2, 1, 3, 2]`, their frequencies would be:
 if k = 1, return `[2]`, if k = 2, return `[2, 1]`, if k = 3, return `[2, 1, 3]`.
 ??
 Array & Hashing — trigger: Frequency almost always means hashmap. Top-k indicates it needs either **sorting** or using a **heap**.
+<!--SR:!2026-07-27,3,250!2026-07-28,4,270-->
 
-#flashcards 
-Why is a min-heap sufficient for Top K Frequent Elements? 
-? 
-Because we only need the k largest frequencies, not a fully sorted ordering. 
+#flashcards
+Why is a min-heap sufficient for Top K Frequent Elements?
+?
+Because we only need the k largest frequencies, not a fully sorted ordering.
+<!--SR:!2026-07-28,4,270-->
 
-#flashcards 
-Why does bucket sort work for Top K Frequent Elements? 
+#flashcards
+Why does bucket sort work for Top K Frequent Elements?
 ?
 The maximum possible frequency is n, so we can bucket numbers by frequency and iterate buckets from high to low.
+<!--SR:!2026-07-27,3,250-->

@@ -49,13 +49,14 @@ sorted_arr = sorted(arr, reverse=True) # [7, 6, 5, 4, 3, 2, 1]
 ## Confusable with
 - [[Heaps]], if you need only a small part that's sorted instead of the whole array.
 
-#flashcards 
+#flashcards
 What is Sorting and how does it work?
-??
-Sorting is ordering your array and make it sorted in order. 
+?
+Sorting is ordering your array and make it sorted in order.
+<!--SR:!2026-07-28,4,270-->
 
 #flashcards
 What's the typical time complexity of Sorting?
-??
+?
 It's $O(n \cdot log n)$
-<!--SR:!2026-07-24,4,270!2000-01-01,1,250-->
+<!--SR:!2026-08-04,11,270-->

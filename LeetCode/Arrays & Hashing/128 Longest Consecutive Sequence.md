@@ -14,7 +14,7 @@ date-first-attempt: 2026-07-20
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed: 2026-07-20
+last-reviewed: 2026-07-24
 ---
 ## 1. Problem (in my own words)
 Given an unsorted array of integers, find the length of the longest consecutive sequence in the elements.
@@ -136,3 +136,4 @@ class Solution:
 
 #flashcards/misclassified/arrays-and-hashing
 On 128 Longest Consecutive Sequence, I first reached for Dynamic Programming, but ==The $O(n)$  time complexity requirement== should have pointed me to ==Hash-set== instead.
+<!--SR:!2026-07-27,3,250!2026-07-27,3,250-->
