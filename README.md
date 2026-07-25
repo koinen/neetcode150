@@ -5,29 +5,29 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 <!-- PROGRESS:START -->
 
-## **Day 9 / 92**
-- **Remaining**: 84 day(s)
-- **Completed**: 18 / 150 (12.0%)
-- **Weighted score**: 34 / 293 (11.6%)
-- **Current pace**: 2.00 problems/day 
-- **Current pace (weighted)**: 3.78 problems/day (weighted)
-- **Required pace**: 1.57 problems/day — ✅ on track
-- **Required pace (weighted)**: 3.08 problems/day — ✅ on track
-- **Current streak**: 8 day(s)
-- **Last active**: 2026-07-23
+## **Day 10 / 92**
+- **Remaining**: 83 day(s)
+- **Completed**: 19 / 150 (12.7%)
+- **Weighted score**: 38 / 293 (13.0%)
+- **Current pace**: 1.90 problems/day 
+- **Current pace (weighted)**: 3.80 problems/day (weighted)
+- **Required pace**: 1.58 problems/day — ✅ on track
+- **Required pace (weighted)**: 3.07 problems/day — ✅ on track
+- **Current streak**: 10 day(s)
+- **Last active**: 2026-07-25
 
 **By difficulty**
-- **Easy**: 5 / 28 (17.9%)
+- **Easy**: 6 / 28 (21.4%)
 - **Medium**: 13 / 101 (12.9%)
-- **Hard**: 1 / 21 (4.8%)
+- **Hard**: 2 / 21 (9.5%)
 
 **By pattern**
 | Pattern | Solved with solution | Solved with hints | Solved | Total | Percentage |
 |---------|--------|-------------------|----------------------|-------|------------|
 | Arrays & Hashing | 0 | 1 | 8 | 9 | 100.0% |
 | Two Pointers | 0 | 0 | 5 | 5 | 100.0% |
-| Stack | 0 | 0 | 5 | 6 | 83.3% |
-| Binary Search | 0 | 0 | 0 | 7 | 0.0% |
+| Stack | 1 | 0 | 5 | 6 | 100.0% |
+| Binary Search | 0 | 0 | 1 | 7 | 14.3% |
 | Sliding Window | 0 | 0 | 0 | 6 | 0.0% |
 | Linked List | 0 | 0 | 0 | 11 | 0.0% |
 | Trees | 0 | 0 | 0 | 15 | 0.0% |
