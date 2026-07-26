@@ -20,61 +20,73 @@ last-reviewed: 2026-07-26
 Do a search of an integer on a 2D matrix, which has been sorted in a non-descending order. Return `true` if found, else return `false`. 
 
 ## 2. Constraints & what they imply
-<!-- e.g. n ≤ 10^5 → need O(n log n) or better. n ≤ 20 → bitmask/brute force is fine. -->
 [[Constraint to Complexity Reference|See here for reference]]
 
-| Constraint | Implication for approach |
-| ---------- | ------------------------ |
-|            |                          |
+| Constraint                                                        | Implication for approach                                                         |
+| ----------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `1 <= m, n <= 100`                                                | ~~Up to $O((n\cdot m)^2)$ time complexity~~ invalidated by the third constraint. |
+| `-10^4 <= matrix[i][j], target <= 10^4`                           | int32 is enough yadayada                                                         |
+| You must write a solution in $O(log(m \cdot n))$ time complexity. | b-b-binary search...                                                             |
 
 ## 3. Recognition trigger
-<!-- The single most important field. What SHOULD have told you the pattern, before you solved it?
-This is what you're actually training — pattern recall, not the solution itself. -->
+Sorted, $O(log (...))$ time complexity.
 
 ## 4. Brute force
 
 > [!info]- Idea
-> {{your idea here}}
+> Scan through the array and just inspect the elements one by one.
 ---
 >[!info]- Complexity 
->time $O({{your complexity here}})$ / space $O({{your complexity here}})$
+>time $O(n\cdot m)$ / space $O(1)$
 ---
 > [!warning]- Why it's not enough?
-> {{why?}}
+> Why don't you use the fact that it's sorted instead of inspecting it one-by-one, to skip some elements.
 
 ## 5. Optimal approach
 
 > [!info]- Complexity 
->time $O({{your complexity here}})$ / space $O({{your complexity here}})$
+>time $O(log(m\cdot n))$ / space $O(1)$
 ---
 > [!info]- Idea
-> {{your idea here}}
+> "Flatten" the matrix to an array, and use binary search.
 ---
 > [!info]- Why it works (the key insight)
-> {{your insight here}}
+> Because.
 
 ## 6. Code
 ```python
-# language: 
+# language: python
 
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        h = len(matrix)
+        w = len(matrix[0])
+        l = 0
+        r = w*h - 1
+        while l <= r:
+            m = (l + r) // 2
+            row = m // w
+            col = m % w
+
+            if matrix[row][col] == target:
+                return True
+            if matrix[row][col] < target:
+                l = m + 1
+            else:
+                r = m - 1
+        
+        return False
 ```
 
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
-- 
-- 
+- none
 
 ## 8. Edge cases to always check for this pattern
-- [ ] 
-- [ ] 
+- [x] no
 
 ## 9. Related problems
-<!-- Link other notes: [[Two Sum]] -->
-- 
+- [[704 Binary Search]]
 
 ---
 
 ### Flashcards
-
-#flashcards/misclassified/{{pattern}} 
-On 74 Search a 2D Matrix, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.
