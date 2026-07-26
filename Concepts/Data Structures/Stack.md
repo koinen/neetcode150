@@ -16,7 +16,8 @@ title: Stack
 ```python
 from collections import deque # python doesn't have a strictly "just stack" implementation
 
-stack = deque()
+stack = deque() # you can also use list though, 
+# stack = [] # it has the same ops signatures
 
 # push
 stack.append(1)
@@ -30,11 +31,10 @@ top = stack.pop()
 # isEmpty
 if not stack:
 	print("Stack is empty.")
-
 ```
 ## When you reach for it
-- Typically, when you need some recent information to proceed. 
-- Usually, it's "the next greater/smaller element", in which case you can use a [[Monotonic Stack|monotonic stack]], where you get to merge elements based on conditions
+- Typically, when you need some recent/latest information to proceed. 
+- Usually, it's "the next greater/smaller element", in which case you can use a [[Monotonic Stack|monotonic stack]], where you get to merge elements based on conditions.
 ## Gotchas
 - 
 
@@ -55,14 +55,4 @@ A LIFO data structure.
 What's the typical time complexity of Stack?
 ?
 $O(1)$ for all operations (push, pop, peek, isEmpty)
-<!--SR:!2026-07-28,4,270-->
-
-#flashcards/pattern
-Stack applies when =={{condition A}}==, distinguishing it from {{competing pattern}}, which applies when =={{condition B}}==. The signal in problem statements is usually =={{phrasing/constraint that tips it off}}==.
-<!--SR:!2026-07-28,4,270!2026-07-28,4,270!2026-07-28,4,270-->
-
-#flashcards/implementation/{{pattern}}
-{{Specific mechanical question — e.g. "In binary search, when should you use lo < hi vs lo <= hi?"}}
-?
-{{Answer, stated as a rule you can apply, not tied to one problem}}
 <!--SR:!2026-07-28,4,270-->
