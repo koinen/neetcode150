@@ -52,7 +52,7 @@ I need the information of the **most recent** larger value up to now.
 >time $O(n)$ / space $O(n)$
 ---
 > [!info]- Idea
-> Use a stack. Loop through the elements from behind, and store a decreasing stack (the top value will be less than the one below it). That way, if you ever need a larger value than the current top, just dig it. 
+> Use a stack. Loop through the elements from behind, and store a [[Monotonic Stack|monotonic decreasing stack]] (the top value will be less than the one below it). That way, if you ever need a larger value than the current top, just dig it. 
 > Also, use the index and not the value, since the problem asks for the distance between indices.
 ---
 > [!info]- Why it works (the key insight)

@@ -1,5 +1,7 @@
 ---
 tags:
+  - "#binary-search"
+  - array
 number: 704
 title: Binary Search
 url: https://leetcode.com/problems/binary-search/
