@@ -29,8 +29,6 @@ In an array of numbers, return the **two** indices of the elements where they su
 | Exactly one solution exists. | we don't need to handle no solution edge case |
 
 ## 3. Recognition trigger
-<!-- The single most important field. What SHOULD have told you the pattern, before you solved it?
-This is what you're actually training — pattern recall, not the solution itself. -->
 USE HASHMAP!!!
 ## 4. Brute force
 
@@ -76,7 +74,6 @@ class Solution(object):
 ```
 
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
 - I tried to do two passes, one for filling up the map, one for checking for solutions.
 	This didn't work, because it introduces edge cases; if the target is the exact twice of the `nums[i]`, it will say it has been registered in the map, and it will return `[i, i]`.  
 

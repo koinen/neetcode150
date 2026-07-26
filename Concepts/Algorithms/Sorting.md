@@ -3,6 +3,7 @@ tags:
   - sorting
 title: Sorting
 ---
+> Disclaimer: this note really isn't a discussion about the algorithm, more like a tool you can use. 
 ## Core ops + complexity
 Just use your language's provided sorting algorithm, for standard sorts ascending or descending. Typically will always end up in $O(n \cdot log n)$ in time complexity
 

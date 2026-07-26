@@ -3,6 +3,9 @@ tags:
   - "#stack"
 title: Stack
 ---
+## What is it?
+A data structure (array variant) that only exposes one way to access the elements, that being the top. It's LIFO, so the last element you inserted will be on the top, and you can only access that, or pop the element to remove it, giving you access to the element below it. 
+
 ## Core ops + complexity
 
 | Core ops | Complexity |
@@ -48,7 +51,7 @@ if not stack:
 #flashcards/concept
 What is Stack and how does it work?
 ?
-A LIFO data structure.
+A data structure (array variant) that only exposes one way to access the elements, that being the top. It's LIFO, so the last element you inserted will be on the top, and you can only access that, or pop the element to remove it, giving you access to the element below it. 
 <!--SR:!2026-07-28,4,270-->
 
 #flashcards/concept
