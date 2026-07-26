@@ -73,8 +73,3 @@ It's designed around one idea, which is for **fast membership testing**
 
 #flashcards/pattern
 Hash Set applies when ==you just need an existence check==, distinguishing it from Hash Map, which applies when ==where you need to assign some value to the element==. The signal in problem statements is usually ==unique elements, ==.
-
-#flashcards/implementation/{{pattern}}
-{{Specific mechanical question — e.g. "In binary search, when should you use lo < hi vs lo <= hi?"}}
-?
-{{Answer, stated as a rule you can apply, not tied to one problem}}
