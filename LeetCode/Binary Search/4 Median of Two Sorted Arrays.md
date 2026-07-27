@@ -1,17 +1,17 @@
 ---
 tags:
-number:
-title: "4 Median of Two Sorted Arrays"
-url:
-difficulty:
-pattern:
-status:
+number: 4
+title: Median of Two Sorted Arrays
+url: https://leetcode.com/problems/median-of-two-sorted-arrays/
+difficulty: Hard
+pattern: Binary Search
+status: solved-with-solution
 first-try:
-date-first-attempt:
+date-first-attempt: 2026-07-26
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed:
+last-reviewed: 2026-07-27
 ---
 ## 1. Problem (in my own words)
 <!-- Rewrite the problem without looking at the original. If you can't, you don't understand it yet. -->

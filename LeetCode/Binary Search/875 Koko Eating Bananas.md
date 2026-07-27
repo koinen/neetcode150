@@ -1,17 +1,17 @@
 ---
 tags:
-number:
-title: "875 Koko Eating Bananas"
-url:
-difficulty:
-pattern:
-status:
-first-try:
-date-first-attempt:
+number: 875
+title: Koko Eating Bananas
+url: https://leetcode.com/problems/koko-eating-bananas/
+difficulty: Medium
+pattern: Binary Search
+status: solved
+first-try: true
+date-first-attempt: 2026-07-26
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed:
+last-reviewed: 2026-07-27
 ---
 ## 1. Problem (in my own words)
 <!-- Rewrite the problem without looking at the original. If you can't, you don't understand it yet. -->

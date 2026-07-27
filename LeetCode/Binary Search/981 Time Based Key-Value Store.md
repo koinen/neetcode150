@@ -1,17 +1,17 @@
 ---
 tags:
-number:
-title: "981 Time Based Key-Value Store"
-url:
-difficulty:
-pattern:
-status:
-first-try:
-date-first-attempt:
+number: 981
+title: Time Based Key-Value Store
+url: https://leetcode.com/problems/time-based-key-value-store/
+difficulty: Medium
+pattern: Binary Search
+status: solved
+first-try: true
+date-first-attempt: 2026-07-26
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed:
+last-reviewed: 2026-07-27
 ---
 ## 1. Problem (in my own words)
 <!-- Rewrite the problem without looking at the original. If you can't, you don't understand it yet. -->
