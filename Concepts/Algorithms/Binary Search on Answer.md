@@ -1,7 +1,7 @@
 ---
 tags:
   - "#binary-search"
-title: Binary Search
+title: Binary Search on Answer
 ---
 ## What is it?
 
@@ -24,19 +24,19 @@ title: Binary Search
 ### Flashcards
 
 #flashcards/concept
-What is Binary Search and how does it work?
+What is Binary Search on Answer and how does it work?
 ?
 {{answer here}}
 <!--SR:!2026-07-28,4,270-->
 
 #flashcards/concept
-What's the typical time complexity of Binary Search?
+What's the typical time complexity of Binary Search on Answer?
 ?
 {{answer here}}
 <!--SR:!2026-07-28,4,270-->
 
 #flashcards/pattern
-Binary Search applies when =={{condition A}}==, distinguishing it from {{competing pattern}}, which applies when =={{condition B}}==. The signal in problem statements is usually =={{phrasing/constraint that tips it off}}==.
+Binary Search on Answer applies when =={{condition A}}==, distinguishing it from {{competing pattern}}, which applies when =={{condition B}}==. The signal in problem statements is usually =={{phrasing/constraint that tips it off}}==.
 <!--SR:!2026-07-28,4,270!2026-07-28,4,270!2026-07-28,4,270-->
 
 #flashcards/implementation/{{pattern}}

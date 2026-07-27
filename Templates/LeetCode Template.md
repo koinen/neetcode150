@@ -8,10 +8,6 @@ pattern:
 status:
 first-try:
 date-first-attempt:
-sr-due:
-sr-interval: 1
-sr-ease: 250
-last-reviewed:
 ---
 ## 1. Problem (in my own words)
 <!-- Rewrite the problem without looking at the original. If you can't, you don't understand it yet. -->

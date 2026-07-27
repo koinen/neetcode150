@@ -34,7 +34,7 @@
     ],
     "noteTagsToIgnore": [],
     "noteFoldersToIgnore": [
-      "**/*.excalidraw.md"
+      "Templates/*.md"
     ],
     "openRandomNote": false,
     "autoNextNote": false,

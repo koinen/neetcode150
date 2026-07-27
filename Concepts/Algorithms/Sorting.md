@@ -40,7 +40,7 @@ sorted_arr = sorted(arr, reverse=True) # [7, 6, 5, 4, 3, 2, 1]
 ## When you reach for it
 - When the problems don't ask for the indices, since you would need to track it if you sort.
 - If you need patterns like [[Binary Search]] or [[Two Pointers]], but the array hasn't been sorted yet.
-- If you need to process elements in a certain order to make your [[Greedy Algorithm]] work.
+- If you need to process elements in a certain order to make your [[Greedy| greedy algorithm]] work.
 - If you need adjacency/grouping by value, not by position.
 - When you're checking frequency/rank rather than raw value.
 

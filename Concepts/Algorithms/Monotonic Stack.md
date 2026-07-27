@@ -4,6 +4,8 @@ tags:
   - "#monotonic-stack"
 title: Monotonic Stack
 ---
+## What is it?
+
 
 ## Example Usage
 - **Python**
