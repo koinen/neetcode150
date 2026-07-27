@@ -14,64 +14,90 @@ sr-ease: 250
 last-reviewed: 2026-07-27
 ---
 ## 1. Problem (in my own words)
-<!-- Rewrite the problem without looking at the original. If you can't, you don't understand it yet. -->
+Design a key-value store that also stores the timestamp. If a get command is invoked with the key `k` and timestamp `ts`, you need to return the most recent value (`t` <= `ts`).
 
 ## 2. Constraints & what they imply
-<!-- e.g. n ≤ 10^5 → need O(n log n) or better. n ≤ 20 → bitmask/brute force is fine. -->
 [[Constraint to Complexity Reference|See here for reference]]
 
-| Constraint | Implication for approach |
-| ---------- | ------------------------ |
-|            |                          |
+| Constraint                                                                                                   | Implication for approach                 |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| `1 <= key.length, value.length <= 100`<br>`key` and `value` consist of lowercase English letters and digits. | not that important... (use string)       |
+| `1 <= timestamp <= 10^7`                                                                                     | i32                                      |
+| At most `2 * 10^5` calls will be made to `set` and `get`.                                                    | Up to $O(n \cdot log n)$ time complexity |
+| All the timestamps `timestamp` of `set` are strictly increasing.                                             |                                          |
 
 ## 3. Recognition trigger
-<!-- The single most important field. What SHOULD have told you the pattern, before you solved it?
-This is what you're actually training — pattern recall, not the solution itself. -->
+It's the same as binary search on answer, you need to search on a space that becomes `[1,1,1,0,0,0,0,0,...]`. 
 
 ## 4. Brute force
 
 > [!info]- Idea
-> {{your idea here}}
+> Use a hash map to save the value and timestamp for the key. Browse through the value and timestamps of the given key and return the most recent.
 ---
 >[!info]- Complexity 
->time $O({{your complexity here}})$ / space $O({{your complexity here}})$
+>time $O(m)$ / space $O(n \cdot m)$
+>`m` is the number of values a key can have; `n` is the number of keys that gets stored.
 ---
 > [!warning]- Why it's not enough?
-> {{why?}}
+> It should be enough... but not optimized enough!
 
 ## 5. Optimal approach
 
 > [!info]- Complexity 
->time $O({{your complexity here}})$ / space $O({{your complexity here}})$
+>time $O(log m)$ / space $O(n \cdot m)$
 ---
 > [!info]- Idea
-> {{your idea here}}
+> Use binary search on answer. Make the condition that the timestamp stored has to be less than the target timestamp.
 ---
 > [!info]- Why it works (the key insight)
-> {{your insight here}}
+> Because of the 4th constraint, really.
 
 ## 6. Code
 ```python
-# language: 
+# language: python
 
+class TimeMap:
+    def __init__(self):
+        self.hmap = {}
+
+    def set(self, key: str, value: str, timestamp: int) -> None:
+        if key in self.hmap: 
+            self.hmap[key].append((timestamp, value))
+        else:
+            self.hmap[key] = [(timestamp, value)]
+
+    def get(self, key: str, timestamp: int) -> str:
+        if not key in self.hmap:
+            return ""
+        kv = self.hmap[key]
+        l = 0
+        r = len(kv) - 1
+        if timestamp < kv[0][0]:
+            return ""
+        while l < r:
+            m = (l + r + 1) // 2
+            if kv[m][0] <= timestamp:
+                l = m
+            else:
+                r = m - 1
+
+        return kv[l][1]
+
+
+# Your TimeMap object will be instantiated and called as such:
+# obj = TimeMap()
+# obj.set(key,value,timestamp)
+# param_2 = obj.get(key,timestamp)
 ```
 
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
-- 
+- Not knowing when to use `l <= r`, or `l < r`. Check [[binary search]] for the details.
 - 
 
 ## 8. Edge cases to always check for this pattern
-- [ ] 
-- [ ] 
+- [x] when no key is found
 
 ## 9. Related problems
-<!-- Link other notes: [[Two Sum]] -->
 - 
 
 ---
-
-### Flashcards
-
-#flashcards/misclassified/{{pattern}} 
-On 981 Time Based Key-Value Store, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.

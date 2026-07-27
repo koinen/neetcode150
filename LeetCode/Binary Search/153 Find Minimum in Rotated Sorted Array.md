@@ -14,7 +14,7 @@ sr-ease: 250
 last-reviewed: 2026-07-26
 ---
 ## 1. Problem (in my own words)
-Given an array of integers `arr`, in which it has been sorted in a non-descending order. However, it got rotated.
+Given an array of integers `arr`, in which it has been sorted in a non-descending order. However, it got rotated. Find the minimum value.
 
 Rotated is when you translate the indices, for example:
 Original: `[0, 1, 2, 3, 4, 5, 6, 7]`
@@ -52,30 +52,41 @@ $O(log n)$ time complexity. Sorted.
 > Use binary search. However, you can't really apply it to the problem directly. Use the fact that it's sorted, and therefore if `arr[left] > arr[mid]`, the 'jump' from the rotation is in there; else, it's on the other half; or it could be that there's no rotation at all.
 ---
 > [!info]- Why it works (the key insight)
-> {{your insight here}}
+> Because you can think of the array segments as non-rotated or rotated, which results in a more digestible to use binary search on. `[1,1,1,1,0,0,0,0,0]` where `1` represents rotated (WLOG). And you just need to return the boundary between `1` and `0`.
 
 ## 6. Code
 ```python
-# language: 
+# language: python
 
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        l = 0
+        r = len(nums) - 1
+        while l < r:
+            m = (l + r) // 2
+            # print(f"new l-r={l}-{r}: m={m}")
+            if nums[l] <= nums[m]: # this is proper, no rotation in here, which means, we need to chop it down. either that; or this is the actual minimum.
+                if nums[l] < nums[l-1]:
+                    # print("returning early...")
+                    return nums[l]
+                l = m + 1
+            else:
+                r = m
+        #              m
+        #  0  1  2  3  4  5  6  7  8  9
+        # [8, 9, 0, 1, 2, 3, 4, 5, 6, 7]
+        # [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+        return nums[l]
 ```
 
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
-- 
-- 
+- I checked the whether this segment is rotated or not by comparing left and right; which defeats the whole purpose. I only need to check one half, if it's rotated check here; if not check the other half.
+- Knowing when to use `l <= r`, or `l < r`. Check [[binary search]] for the details.
 
 ## 8. Edge cases to always check for this pattern
-- [ ] 
-- [ ] 
+- [ ] Handle if array isn't rotated (Fortunately python can do `[-1]`, which loops back and accesses the end of the array, so I don't have to explicitly handle it, haha)
 
 ## 9. Related problems
-<!-- Link other notes: [[Two Sum]] -->
-- 
+- [[33 Search in Rotated Sorted Array]]
 
 ---
-
-### Flashcards
-
-#flashcards/misclassified/{{pattern}} 
-On 153 Find Minimum in Rotated Sorted Array, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.
