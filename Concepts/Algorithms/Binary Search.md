@@ -2,6 +2,10 @@
 tags:
   - "#binary-search"
 title: Binary Search
+sr-due:
+sr-ease:
+sr-interval:
+last-reviewed-at: 2026-07-27
 ---
 ## What is it?
 

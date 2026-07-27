@@ -2,6 +2,10 @@
 tags:
   - "#two-pointers"
 title: Two Pointers
+sr-due:
+sr-ease:
+sr-interval:
+last-reviewed-at: 2026-07-27
 ---
 ## Core ops + complexity
 

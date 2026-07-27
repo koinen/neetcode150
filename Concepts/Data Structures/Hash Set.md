@@ -2,6 +2,10 @@
 tags:
   - hashtable
 title: Hash Set
+sr-due:
+sr-ease:
+sr-interval:
+last-reviewed-at: 2026-07-26
 ---
 ## What is it?
 It's the representation of the mathematical concept: set. It can store elements, in which all elements are unique, even if it gets inserted the same element twice or more. 

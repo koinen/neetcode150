@@ -3,6 +3,10 @@ tags:
   - "#stack"
   - "#monotonic-stack"
 title: Monotonic Stack
+sr-due:
+sr-ease:
+sr-interval:
+last-reviewed-at: 2026-07-27
 ---
 ## What is it?
 

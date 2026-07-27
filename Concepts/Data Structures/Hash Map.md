@@ -2,6 +2,10 @@
 tags:
   - hashtable
 title: Hash Map
+sr-due:
+sr-ease:
+sr-interval:
+last-reviewed-at: 2026-07-26
 ---
 ## What is it?
 It's a data structure that stores key-value pairs and uses a hash function to map keys to locations in memory, allowing fast average-case insertion, lookup, and deletion by key.

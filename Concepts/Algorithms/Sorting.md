@@ -2,6 +2,10 @@
 tags:
   - sorting
 title: Sorting
+sr-due:
+sr-ease:
+sr-interval:
+last-reviewed-at: 2026-07-27
 ---
 > Disclaimer: this note really isn't a discussion about the algorithm, more like a tool you can use. 
 ## Core ops + complexity

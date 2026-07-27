@@ -2,6 +2,10 @@
 tags:
   - "#stack"
 title: Stack
+sr-due:
+sr-ease:
+sr-interval:
+last-reviewed-at: 2026-07-26
 ---
 ## What is it?
 A data structure (array variant) that only exposes one way to access the elements, that being the top. It's LIFO, so the last element you inserted will be on the top, and you can only access that, or pop the element to remove it, giving you access to the element below it. 
