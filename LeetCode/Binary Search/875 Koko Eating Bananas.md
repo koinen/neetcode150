@@ -91,7 +91,7 @@ class Solution:
 ```
 
 ## 7. Mistakes I actually made
-- [[Binary search on answer]] has a different mechanism, since it needs to store the answer and keep searching, not just return when it finds the exact match (of satisfying the condition).  
+- [[binary search|Binary search on answer]] has a different mechanism, since it needs to store the answer and keep searching, not just return when it finds the exact match (of satisfying the condition).  
 - Didn't know how to effectively use `ceil` (without actually using `math.ceil`)
 
 ## 8. Edge cases to always check for this pattern

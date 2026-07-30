@@ -8,7 +8,7 @@ sr-interval:
 last-reviewed-at: 2026-07-26
 ---
 ## What is it?
-A data structure (array variant, like [[Stack]] or [[queue]], etc.) that **guarantees the first element is the smallest/largest**, depends if your heap is a min-heap or a max-heap respectively. It doesn't do a full sorting, just putting the smallest/largest element in the front.
+A data structure (array variant, like [[stack]] or [[queue]], etc.) that **guarantees the first element is the smallest/largest** (depends if your heap is a min-heap or a max-heap respectively). It doesn't do a full-blown sort, it just puts the smallest/largest element in the front.
 
 ## Core ops + complexity
 
