@@ -14,7 +14,7 @@ date-first-attempt: 2026-07-16
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed: 2026-07-17
+last-reviewed: 2026-08-01
 ---
 ## 1. Problem (in my own words)
 <!-- Rewrite the problem without looking at the original. If you can't, you don't understand it yet. -->
@@ -70,6 +70,24 @@ class Solution(object):
 
 ```
 
+```rust
+// language: rust
+
+use std::collections::HashSet;
+
+impl Solution {
+    pub fn contains_duplicate(nums: Vec<i32>) -> bool {
+        let mut seen = HashSet::with_capacity(nums.len());
+        for n in nums {
+            if !seen.insert(n) {
+                return true; // insert fails -> already exists.
+            }
+        }
+        false
+    }
+}
+
+```
 ## 7. Mistakes I actually made
 <!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
 - NONE

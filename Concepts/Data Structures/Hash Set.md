@@ -58,11 +58,25 @@ use std::collections::HashSet // import namespace
 // init empty (no pre-defined size)
 hset = HashSet::new();
 
-// init empty with pre-defined size
+// init empty with pre-defined size (allocated memory with the size)
 hset_presize = HashSet::with_capacity(5);
 
-// init with initial elements
-hset_elmt = HashSet::
+// add/insert
+hset.insert(5);
+
+// contains
+if hset.contains(&5) {
+	println!("it exists!");
+}
+
+// remove
+hset.remove(&5);
+
+// size 
+println!(hset.len());
+
+// clear
+hset.clear();
 ```
 ## When you reach for it
 - You just need **fast membership testing**, no values assigned to the members.

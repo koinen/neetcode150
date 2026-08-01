@@ -46,6 +46,18 @@ value = d.pop(key) # both are unsafe, but you can use d.pop(key, fallback) to ma
 if key in hmap:
 	print("key is in hmap!")
 ```
+
+```rust
+// language: rust
+
+use std::collection::HashMap; // import namespace
+
+// init
+let mut hmap = HashMap::new();
+
+
+
+```
 ## When you reach for it
 - When you need to assign value to a certain key (duh). Typically used in frequency (for now at least).
 
