@@ -51,6 +51,19 @@ print(len(hset))
 # clear 
 hset.clear()
 ```
+- Rust
+```rust
+use std::collections::HashSet // import namespace
+
+// init empty (no pre-defined size)
+hset = HashSet::new();
+
+// init empty with pre-defined size
+hset_presize = HashSet::with_capacity(5);
+
+// init with initial elements
+hset_elmt = HashSet::
+```
 ## When you reach for it
 - You just need **fast membership testing**, no values assigned to the members.
 
