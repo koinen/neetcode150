@@ -79,6 +79,19 @@ class Solution(object):
 				
 ```
 
+```rust
+// language: rust
+use std::collections::HashMap;
+
+impl Solution {
+    pub fn is_anagram(s: String, t: String) -> bool {
+        let mut counts = [0i32; 26];
+        for c in s.bytes() { counts[(c - b'a') as usize] += 1; }
+        for c in t.bytes() { counts[(c - b'a') as usize] -= 1; }
+        counts.into_iter().all(|v| v == 0)
+    }
+}
+```
 ## 7. Mistakes I actually made
 <!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
 - None, only syntax problems 
