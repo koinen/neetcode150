@@ -76,6 +76,34 @@ class Solution:
         return True
 ```
 
+```rust
+// language: rust
+impl Solution {
+	pub fn is_valid(s: String) -> bool {
+		let mut stack = Vec::<u8>::new();
+
+		for c in s.into_bytes() {
+			if c == b'(' || c == b'[' || c == b'{' {
+				stack.push(c);
+			} else {
+				if stack.len() <= 0 {
+                    return false;
+                } else {
+                    let k = stack.pop().unwrap();
+                    if !((c == b')' && k == b'(') || (c == b']' && k == b'[') || (c == b'}' && k == b'{')) {
+                        return false;
+                    }
+                }
+			}
+		}
+		if stack.len() > 0 {
+			false
+		} else {
+			true
+		}
+	}
+}
+```
 ## 7. Mistakes I actually made
 - None
 ## 8. Edge cases to always check for this pattern
