@@ -73,6 +73,22 @@ class Solution(object):
 		return [0, 0]
 ```
 
+```rust
+use std::collections::HashMap;
+impl Solution {
+	pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> { 
+		let mut map = HashMap::<i32, i32>::with_capacity(nums.len());
+		
+		for (idx, n) in nums.iter().enumerate() {
+			if let Some(v) = map.get(&(target - (*n))) {
+				return vec![idx as i32, *v];
+			}
+			map.insert(*n, idx as i32);
+		}
+		vec![]
+	}
+}
+```
 ## 7. Mistakes I actually made
 - I tried to do two passes, one for filling up the map, one for checking for solutions.
 	This didn't work, because it introduces edge cases; if the target is the exact twice of the `nums[i]`, it will say it has been registered in the map, and it will return `[i, i]`.  

@@ -126,6 +126,31 @@ class Solution(object):
         return res
 ```
 
+```rust
+// language: rust
+use std::collections::BinaryHeap;
+use std::collections::HashMap;
+
+impl Solution {
+	pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {
+		let mut map = HashMap::new();
+		for &n in &nums {
+			*map.entry(n).or_insert(0) += 1;
+		}
+		
+		let mut heap = BinaryHeap::new();
+		for (key, val) in map {
+			heap.push((val, key))
+		}
+		
+		let mut res = Vec::<i32>::with_capacity(k as usize);
+		for _ in 0..k {
+			res.push(heap.pop().unwrap().1);
+		}
+		res
+	}
+}
+```
 ### 3. Bucket Sort
 ```python
 class Solution(object):
@@ -152,6 +177,29 @@ class Solution(object):
             i -= 1
 
         return res
+```
+
+```rust
+// language: rust
+use std::collections::HashMap;
+
+impl Solution {
+	pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {
+		let mut map = HashMap::new();
+		for &n in &nums {
+			*map.entry(n).or_insert(0) += 1;
+		}
+		let mut buckets = HashMap::<i32, i32>::with_capacity(nums.len());
+		for (key, val) in map {
+			buckets.insert(val, key);
+		}
+		
+		let mut res = Vec::<i32>::with_capacity(k);
+		while res.len() < k {
+			res.
+		}
+	}
+}
 ```
 ## 7. Mistakes I actually made
 - I thought a heap was an automatically sorting array. [[Heaps#What is it?|Apparently not.]] 

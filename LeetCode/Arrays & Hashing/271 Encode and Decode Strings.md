@@ -131,6 +131,40 @@ class Solution:
 			i += length + 1
 		return res
 ```
+
+```rust
+// language: rust
+
+impl Solution {
+	pub fn encode(strs: Vec<String>) -> String {
+		strs.into_iter().fold(
+			String::new(), |mut acc, s| {
+				acc.push_str(&s.len().to_string());
+				acc.push('#');
+				acc.push_str(&s);
+				acc
+			}
+		)
+	}
+	
+	pub fn decode(s: String) -> Vec<String> {
+		let mut vec: Vec<String> = Vec::new();
+		let bytes = s.as_bytes();
+		let mut i = 0usize;
+		while i < bytes.len() {
+			let mut count = 0usize;
+			while bytes[i] != b'#' {
+				count = count * 10 + (bytes[i] - b'0') as usize;
+				i += 1;
+			}
+			i += 1;
+			vec.push(String::from_utf8((&bytes[i..i+count]).to_vec()).unwrap());
+			i += count;
+		}
+		vec
+	}
+}
+```
 ## 7. Mistakes I actually made
 <!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
 - In **the optimal solution** (encoding the length), I incremented by `1` instead of `length + 1` at the end of the loop.

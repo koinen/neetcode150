@@ -101,6 +101,62 @@ class Solution:
 		return True
 ```
 
+```rust
+// language: rust
+use std::collections::HashSet;
+
+impl Solution {
+    pub fn is_valid_sudoku(board: Vec<Vec<char>>) -> bool {
+        let mut set = HashSet::with_capacity(9);
+
+        for i in 0..9 {
+            for j in 0..9 {
+                let val = board[i][j];
+                if val == '.' {
+                    continue;
+                }
+                if !set.insert(val) {
+                    return false;
+                } 
+            }
+            set.clear();
+        }
+
+        for j in 0..9 {
+            for i in 0..9 {
+                let val = board[i][j];
+                if val == '.' {
+                    continue;
+                }
+                if !set.insert(val) {
+                    return false;
+                }
+            }
+            set.clear();
+        }
+
+        for k in 0..9 {
+            let pad_row = (k / 3) * 3;
+            let pad_col = (k % 3) * 3;
+            for i in 0..3 {
+                for j in 0..3 {
+                    let val = board[i + pad_row][j + pad_col];
+                    if val == '.' {
+                        continue;
+                    }
+                    if !set.insert(val) {
+                        return false;
+                    }
+                }
+            }
+            set.clear();
+        }
+        true
+    }
+}
+
+```
+
 ## 7. Mistakes I actually made
 - None
 

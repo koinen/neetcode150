@@ -87,6 +87,23 @@ class Solution(object):
 		return ans
 ```
 
+```rust
+use std::collections::HashMap;
+
+impl Solution {
+	pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
+		let mut map = HashMap::<Vec<char>, Vec<String>>::with_capacity(strs.len());
+		
+		for s in strs {
+			let mut sorted: Vec<char> = s.chars().collect();
+			sorted.sort_unstable();
+			map.entry(sorted).or_insert(Vec::new()).push(s);
+		}
+		
+		map.into_values().collect()
+	}
+}
+```
 ## 7. Mistakes I actually made
 <!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
 - You can't keep a hashmap as a key (in python, at least. I don't know about other languages).

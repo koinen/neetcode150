@@ -84,6 +84,30 @@ class Solution:
 		return prefix 
 ```
 
+```rust
+// language: rust
+impl Solution {
+    pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
+        let len = nums.len();
+        let mut prefix = Vec::with_capacity(len);
+        let mut suffix = Vec::with_capacity(len);
+
+        prefix.push(1);
+        suffix.push(1);
+
+        for i in 1..len {
+            prefix.push(prefix[i-1] * nums[i-1]);
+            suffix.push(suffix[i-1] * nums[len-i]);
+        }
+
+        for i in 0..len {
+            prefix[i] *= suffix[len-1-i];
+        }
+
+        prefix
+    }
+}
+```
 ### Prefix-Suffix (Single Element)
 ```python
 # language: python
@@ -104,6 +128,29 @@ class Solution:
 					
 		return res
 ```
+
+```rust
+// language: rust
+
+impl Solution {
+	pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {
+		let len = nums.len();
+		let mut fix = 1;
+		let mut res = Vec::<i32>::with_capacity(len);
+		for i in 0..len {
+			res.push(fix);
+			fix *= nums[i];
+		}
+		fix = 1;
+		for i in (0..len).rev() {
+			res[i] *= fix;
+			fix *= nums[i];
+		}
+		res
+	}
+}
+```
+
 ## 7. Mistakes I actually made
 - Off by one, wasn't sure where the range should begin and when it should end.
 
