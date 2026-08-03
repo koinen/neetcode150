@@ -189,15 +189,21 @@ impl Solution {
 		for &n in &nums {
 			*map.entry(n).or_insert(0) += 1;
 		}
-		let mut buckets = HashMap::<i32, i32>::with_capacity(nums.len());
+		let mut buckets = vec![Vec::new();nums.len() + 1];
 		for (key, val) in map {
-			buckets.insert(val, key);
+			buckets[val].push(key);
 		}
 		
-		let mut res = Vec::<i32>::with_capacity(k);
-		while res.len() < k {
-			res.
+		let mut res = Vec::<i32>::with_capacity(k as usize);
+		for freq in (0..nums.len()+1).rev() {
+			for &n in &buckets[freq] {
+				res.push(n);
+				if res.len() == k as usize {
+					return res;
+				}
+			}
 		}
+		vec![]
 	}
 }
 ```
