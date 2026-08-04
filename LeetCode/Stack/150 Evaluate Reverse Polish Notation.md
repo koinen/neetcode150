@@ -78,6 +78,32 @@ class Solution:
         return stack.pop()
 ```
 
+```rust
+// language: rust
+
+impl Solution {
+    pub fn eval_rpn(tokens: Vec<String>) -> i32 {
+        let mut stack = Vec::<i32>::with_capacity(tokens.len());
+        for s in &tokens {
+            if s == "+" || s == "-" || s == "*" || s == "/" {
+                let right = stack.pop().unwrap();
+                let left = stack.pop().unwrap();
+                let res = match s.as_str() {
+                    "+" => left + right,
+                    "-" => left - right,
+                    "/" => left / right,
+                    "*" => left * right,
+                    _ => unreachable!(),
+                };
+                stack.push(res);
+            } else {
+                stack.push(s.parse().unwrap());
+            } 
+        }
+        stack.pop().unwrap()
+    }
+}
+```
 ## 7. Mistakes I actually made
 - The division i used earlier, with the operator `//` in Python doesn't converge to zero if it's negative. The use of `int(num_l / num_r)` fixes that.
 
