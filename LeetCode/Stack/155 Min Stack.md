@@ -13,7 +13,7 @@ date-first-attempt: 2026-07-22
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed: 2026-07-22
+last-reviewed: 2026-08-03
 ---
 ## 1. Problem (in my own words)
 Design a stack data structure, with the usual `push()`, `pop()`, `top()` methods; but it can also get the minimum value inside the stack with `getMin()`.
@@ -92,6 +92,64 @@ class MinStack:
 # param_4 = obj.getMin()
 ```
 
+```rust
+// language: rust
+struct MinStack {
+    data: Vec<i32>,
+    min: Vec<i32>,
+}
+
+
+/** 
+ * `&self` means the method takes an immutable reference.
+ * If you need a mutable reference, change it to `&mut self` instead.
+ */
+impl MinStack {
+    fn new() -> Self {
+        Self {
+            data: Vec::new(),
+            min: Vec::new()
+        }
+    }
+    
+    fn push(&mut self, value: i32) {
+        self.data.push(value);
+        if let Some(v) = self.min.last() {
+            if value <= *v {
+                self.min.push(value);
+            } 
+        } else {
+            self.min.push(value);
+        }
+    }
+    
+    fn pop(&mut self) {
+        let top = self.data.pop().unwrap();
+        if let Some(v) = self.min.last() {
+            if top == *v {
+                self.min.pop();
+            }
+        } 
+    }
+    
+    fn top(&self) -> i32 {
+        *self.data.last().unwrap()
+    }
+    
+    fn get_min(&self) -> i32 {
+        *self.min.last().unwrap()
+    }
+}
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * let obj = MinStack::new();
+ * obj.push(value);
+ * obj.pop();
+ * let ret_3: i32 = obj.top();
+ * let ret_4: i32 = obj.get_min();
+ */
+```
 ## 7. Mistakes I actually made
 - I initially thought to keep the minimum value as just a variable. But quickly fell apart since it doesn't know which is its predecessor (which is the second least that can replace it). 
 

@@ -13,7 +13,7 @@ date-first-attempt: 2026-07-22
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed: 2026-07-22
+last-reviewed: 2026-08-03
 ---
 ## 1. Problem (in my own words)
 Return `true` if a string `s` is a valid expression of parentheses. Else, false.

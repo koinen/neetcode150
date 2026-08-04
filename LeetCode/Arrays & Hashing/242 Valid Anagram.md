@@ -14,7 +14,7 @@ date-first-attempt: 2026-07-16
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed: 2026-07-17
+last-reviewed: 2026-08-03
 ---
 ## 1. Problem (in my own words)
 Given an array of strings, group them based on if they are anagrams or not.

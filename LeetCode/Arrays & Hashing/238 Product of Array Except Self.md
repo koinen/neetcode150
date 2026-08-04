@@ -13,7 +13,7 @@ date-first-attempt: 2026-07-19
 sr-due:
 sr-interval: -1
 sr-ease: 250
-last-reviewed: 2026-07-19
+last-reviewed: 2026-08-03
 ---
 ## 1. Problem (in my own words)
 Given an array of integers `nums`, return an array in which the elements are the product of all the other elements except itself. 

@@ -14,7 +14,7 @@ date-first-attempt: 2026-07-18
 sr-due:
 sr-interval: 1
 sr-ease: 250
-last-reviewed: 2026-07-18
+last-reviewed: 2026-08-03
 ---
 ## 1. Problem (in my own words)
 Make an encoding and decoding algorithm for a list of strings. It has to be encoded to a single string, and be able to be decoded back to the original list of strings.
