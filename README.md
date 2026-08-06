@@ -5,14 +5,14 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 <!-- PROGRESS:START -->
 
-## **Day 19 / 92**
-- **Remaining**: 74 day(s)
+## **Day 21 / 92**
+- **Remaining**: 72 day(s)
 - **Completed**: 24 / 150 (16.0%)
 - **Weighted score**: 51 / 293 (17.4%)
-- **Current pace**: 1.26 problems/day 
-- **Current pace (weighted)**: 2.68 problems/day (weighted)
-- **Required pace**: 1.70 problems/day — ⚠️ behind pace
-- **Required pace (weighted)**: 3.27 problems/day — ⚠️ behind pace
+- **Current pace**: 1.14 problems/day 
+- **Current pace (weighted)**: 2.43 problems/day (weighted)
+- **Required pace**: 1.75 problems/day — ⚠️ behind pace
+- **Required pace (weighted)**: 3.36 problems/day — ⚠️ behind pace
 - **Current streak**: 0 day(s)
 - **Last active**: 2026-07-26
 
