@@ -79,6 +79,26 @@ class Solution:
         return ans
 ```
 
+```rust
+// language: rust
+impl Solution {
+    pub fn daily_temperatures(temperatures: Vec<i32>) -> Vec<i32> {
+        let mut stack = Vec::<(i32, usize)>::with_capacity(temperatures.len());
+
+        let mut res = vec![0i32; temperatures.len()];
+        for (i, n) in temperatures.iter().enumerate().rev() {
+            while stack.len() > 0 && *n >= stack.last().unwrap().0 {
+                stack.pop();
+            }
+            if stack.len() > 0 {
+                res[i] = (stack.last().unwrap().1 - i) as i32;
+            }
+            stack.push((*n, i));
+        }
+        return res;
+    }
+}
+```
 ## 7. Mistakes I actually made
 - Keep the index, instead of the values. The problem asks for indices is why.
 
