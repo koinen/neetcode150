@@ -7,18 +7,18 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 ## **Day 23 / 92**
 - **Remaining**: 70 day(s)
-- **Completed**: 25 / 150 (16.7%)
-- **Weighted score**: 52 / 293 (17.7%)
-- **Current pace**: 1.09 problems/day 
-- **Current pace (weighted)**: 2.26 problems/day (weighted)
-- **Required pace**: 1.79 problems/day — ⚠️ behind pace
-- **Required pace (weighted)**: 3.44 problems/day — ⚠️ behind pace
+- **Completed**: 26 / 150 (17.3%)
+- **Weighted score**: 54 / 293 (18.4%)
+- **Current pace**: 1.13 problems/day 
+- **Current pace (weighted)**: 2.35 problems/day (weighted)
+- **Required pace**: 1.77 problems/day — ⚠️ behind pace
+- **Required pace (weighted)**: 3.41 problems/day — ⚠️ behind pace
 - **Current streak**: 1 day(s)
 - **Last active**: 2026-08-06
 
 **By difficulty**
 - **Easy**: 7 / 28 (25.0%)
-- **Medium**: 18 / 101 (17.8%)
+- **Medium**: 19 / 101 (18.8%)
 - **Hard**: 3 / 21 (14.3%)
 
 **By pattern**
@@ -28,7 +28,7 @@ Of course, it would be best if you use Obsidian to display the notes.
 | Two Pointers | 0 | 0 | 5 | 5 | 100.0% |
 | Stack | 1 | 0 | 5 | 6 | 100.0% |
 | Binary Search | 1 | 0 | 6 | 7 | 100.0% |
-| Sliding Window | 0 | 0 | 1 | 6 | 16.7% |
+| Sliding Window | 0 | 0 | 2 | 6 | 33.3% |
 | Linked List | 0 | 0 | 0 | 11 | 0.0% |
 | Trees | 0 | 0 | 0 | 15 | 0.0% |
 | Tries | 0 | 0 | 0 | 3 | 0.0% |
