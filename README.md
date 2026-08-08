@@ -5,21 +5,21 @@ Of course, it would be best if you use Obsidian to display the notes.
 
 <!-- PROGRESS:START -->
 
-## **Day 23 / 92**
-- **Remaining**: 70 day(s)
-- **Completed**: 26 / 150 (17.3%)
-- **Weighted score**: 54 / 293 (18.4%)
-- **Current pace**: 1.13 problems/day 
-- **Current pace (weighted)**: 2.35 problems/day (weighted)
+## **Day 24 / 92**
+- **Remaining**: 69 day(s)
+- **Completed**: 28 / 150 (18.7%)
+- **Weighted score**: 61 / 293 (20.8%)
+- **Current pace**: 1.17 problems/day 
+- **Current pace (weighted)**: 2.54 problems/day (weighted)
 - **Required pace**: 1.77 problems/day — ⚠️ behind pace
-- **Required pace (weighted)**: 3.41 problems/day — ⚠️ behind pace
-- **Current streak**: 1 day(s)
-- **Last active**: 2026-08-06
+- **Required pace (weighted)**: 3.36 problems/day — ⚠️ behind pace
+- **Current streak**: 3 day(s)
+- **Last active**: 2026-08-08
 
 **By difficulty**
 - **Easy**: 7 / 28 (25.0%)
-- **Medium**: 19 / 101 (18.8%)
-- **Hard**: 3 / 21 (14.3%)
+- **Medium**: 21 / 101 (20.8%)
+- **Hard**: 4 / 21 (19.0%)
 
 **By pattern**
 | Pattern | Solved with solution | Solved with hints | Solved | Total | Percentage |
@@ -28,7 +28,7 @@ Of course, it would be best if you use Obsidian to display the notes.
 | Two Pointers | 0 | 0 | 5 | 5 | 100.0% |
 | Stack | 1 | 0 | 5 | 6 | 100.0% |
 | Binary Search | 1 | 0 | 6 | 7 | 100.0% |
-| Sliding Window | 0 | 0 | 2 | 6 | 33.3% |
+| Sliding Window | 0 | 1 | 4 | 6 | 83.3% |
 | Linked List | 0 | 0 | 0 | 11 | 0.0% |
 | Trees | 0 | 0 | 0 | 15 | 0.0% |
 | Tries | 0 | 0 | 0 | 3 | 0.0% |
