@@ -10,7 +10,7 @@ first-try: true
 date-first-attempt: 2026-08-07
 ---
 ## 1. Problem (in my own words)
-Given two strings `s1` and `s2`, find out if `s2` contains a permutation/anagram of itself inside `s1`. If so, return `true`. Else, return `false`.   
+Given two strings `s1` and `s2`, find out if `s2` contains a permutation/anagram of itself inside `s1`. If so, return `true`. Else, return `false`.
 
 ## 2. Constraints & what they imply
 [[Constraint to Complexity Reference|See here for reference]]
