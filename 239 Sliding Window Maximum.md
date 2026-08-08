@@ -27,7 +27,7 @@ Window position                Max
  1  3  -1  -3  5 [3  6  7]      7
 ```
 
-## 2. Constraints & what they imply
+## 2. Constraints & what they imply 
 [[Constraint to Complexity Reference|See here for reference]]
 
 | Constraint                 | Implication for approach                 |
@@ -50,7 +50,7 @@ Contiguous subrange (window). Linear growth.
 > Again, because you're repeating work. You should be able to keep track previous windows, since it's only one number forgotten, one new number to keep track of. 
 
 ## 5. Optimal approach
-### Suboptimal
+### Heap (Suboptimal)
 > [!info]- Complexity 
 >time $O(n \cdot log n)$ / space $O(n)$
 ---
@@ -58,38 +58,101 @@ Contiguous subrange (window). Linear growth.
 > Use sliding window and use a heap to keep track of the maximum of the window. But we need to make it so it describes the current state of the window. One way to work around this is keep the index of the element in the heap and compare it to the left index of the window.
 ---
 > [!info]- Why it works (the key insight)
-> It works because 
-### Optimal
+> It works because you perform a scan only once. 
+### Deque (Optimal)
 > [!info]- Complexity 
->time $O(n)$ / space $O({{your complexity here}})$
+>time $O(n)$ / space $O(k)$
 ---
 > [!info]- Idea
-> {{your idea here}}
+> Use sliding window, but keep a monotonic deque. The problem is surprisingly similar to [[155 Min Stack]], but instead of saving the minimum up to now; it's the maximum up to now, and the maximum can get stale (it's no longer inside the window). Therefore, we would also need to discard stale elements.
 ---
 > [!info]- Why it works (the key insight)
-> {{your insight here}}
+> Because we always move to the right.
 ## 6. Code
-```python
-# language: 
 
+### Heap
+```rust
+// language: rust
+
+use std::collections::BinaryHeap;
+
+impl Solution {
+    pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
+        let mut ans = vec![0;nums.len() - k as usize + 1];
+        let mut l = 0;
+        let mut heap = BinaryHeap::new();
+        for i in 0..k-1 {
+            heap.push((nums[i as usize], i));
+        }
+        for r in k-1..(nums.len() as i32) {
+            heap.push((nums[r as usize], r));
+            while let Some(&top) = heap.peek() {
+                if top.1 >= l {
+                    ans[l as usize] = top.0;
+                    break;
+                }
+                heap.pop();
+            }
+            l += 1;
+        }
+        ans
+    }
+}
 ```
 
+### Deque
+```rust
+// language: rust
+
+use std::collections::BinaryHeap;
+use std::collections::VecDeque;
+
+impl Solution {
+    pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
+        let mut ans = vec![0;nums.len() - k as usize + 1];
+        let mut l = 0;
+
+        let mut dq = VecDeque::<(i32, i32)>::new();
+        for i in 0..k-1 {
+            while let Some(&top) = dq.back() {
+                if nums[i as usize] < top.0 {
+                    break;
+                } 
+                dq.pop_back();
+            }
+            dq.push_back((nums[i as usize], i));
+        }
+        
+        for r in k-1..(nums.len() as i32) {
+            while let Some(&top) = dq.back() {
+                if nums[r as usize] < top.0 {
+                    break;
+                } 
+                dq.pop_back();
+            }
+            dq.push_back((nums[r as usize], r));
+            while let Some(&bot) = dq.front() {
+                if bot.1 >= l {
+                    ans[l as usize] = bot.0;
+                    break;
+                }
+                dq.pop_front();
+            }
+            l += 1;
+        }
+        ans
+    }
+}
+```
 ## 7. Mistakes I actually made
-<!-- Be specific — "off by one in the while condition," not "careless." Vague entries don't help future-you. -->
-- 
-- 
+- I initially thought to just keep the maximum value, but that idea quickly falls apart because we can't find the next maximum. This leads me to the heap idea. But apparently there's a more optimized approach with deque. 
 
 ## 8. Edge cases to always check for this pattern
 - [ ] 
-- [ ] 
 
 ## 9. Related problems
-<!-- Link other notes: [[Two Sum]] -->
 - 
 
 ---
 
 ### Flashcards
-
-#flashcards/misclassified/{{pattern}} 
-On 239 Sliding Window Maximum, I first reached for =={{wrong pattern}}==, but =={{the specific constraint/phrasing that ruled it out}}== should have pointed me to =={{correct pattern}}== instead.
