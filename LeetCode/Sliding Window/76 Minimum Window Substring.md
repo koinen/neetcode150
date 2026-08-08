@@ -122,7 +122,7 @@ impl Solution {
 - I initially thought the window should start as the whole string (entire opposite from the usual start from empty, grow while valid; shrink if not), but apparently you still start at empty and grow until valid, shrink while valid.
 
 ## 8. Edge cases to always check for this pattern
-- [ ] No answer guaranteed, handle cases input is definitely invalid or when no answer is found.
+- [ ] No answer guaranteed, handle cases when input is definitely invalid or when no answer is found.
 
 ## 9. Related problems
 - 
